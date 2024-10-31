@@ -9,12 +9,14 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@MappedSuperclass
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class PreferenceEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @ManyToOne
+    private UserEntity user;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
