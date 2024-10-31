@@ -1,5 +1,0 @@
-C:\Users\allana\Documents\4Periodo\LaboratorioProgramacao\ProjetoCoor\ProjetoCor\ProjetoCor\obj\Debug\ProjetoCor.csproj.AssemblyReference.cache
-C:\Users\allana\Documents\4Periodo\LaboratorioProgramacao\ProjetoCoor\ProjetoCor\ProjetoCor\obj\Debug\ProjetoCor.Form1.resources
-C:\Users\allana\Documents\4Periodo\LaboratorioProgramacao\ProjetoCoor\ProjetoCor\ProjetoCor\obj\Debug\ProjetoCor.Properties.Resources.resources
-C:\Users\allana\Documents\4Periodo\LaboratorioProgramacao\ProjetoCoor\ProjetoCor\ProjetoCor\obj\Debug\ProjetoCor.csproj.GenerateResource.cache
-C:\Users\allana\Documents\4Periodo\LaboratorioProgramacao\ProjetoCoor\ProjetoCor\ProjetoCor\obj\Debug\ProjetoCor.csproj.CoreCompileInputs.cache
