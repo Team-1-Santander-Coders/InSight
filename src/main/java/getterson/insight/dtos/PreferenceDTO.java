@@ -1,4 +1,6 @@
 package getterson.insight.dtos;
 
-public record PreferenceDTO() {
+import getterson.insight.entities.types.PreferenceType;
+
+public record PreferenceDTO(long id, PreferenceType type) {
 }
