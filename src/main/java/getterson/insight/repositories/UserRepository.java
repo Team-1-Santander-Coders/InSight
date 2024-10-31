@@ -1,4 +1,6 @@
 package getterson.insight.repositories;
 
-public interface UserRepository {
-}
+import getterson.insight.entities.UserEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<UserEntity, Long> {}
