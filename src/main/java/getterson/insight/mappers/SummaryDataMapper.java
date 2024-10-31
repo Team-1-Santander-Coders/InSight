@@ -5,9 +5,9 @@ import getterson.insight.entities.SummaryDataEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface SummaryDataMapper {
-    SummaryDataMapper INSTANCE = Mappers.getMapper(SummaryDataMapper.class);
+    //SummaryDataMapper INSTANCE = Mappers.getMapper(SummaryDataMapper.class);
 
     SummaryDataDTO toDTO(SummaryDataEntity entity);
     SummaryDataEntity toEntity(SummaryDataDTO dto);
