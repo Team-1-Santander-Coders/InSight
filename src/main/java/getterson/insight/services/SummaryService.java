@@ -20,42 +20,34 @@ public class SummaryService {
         this.summaryRepository = summaryRepository;
     }
 
-    // Salvar resumos
     public SummaryEntity saveSummary(SummaryEntity summaryEntity) {
         return summaryRepository.save(summaryEntity);
     }
 
-    // Buscar todos os resumos
     public List<SummaryEntity> findAllSummaries() {
         return summaryRepository.findAll();
     }
 
-    // Buscar resumo por ID
     public Optional<SummaryEntity> findSummaryById(Long id) {
         return summaryRepository.findById(id);
     }
 
-    // Deletar resumo por ID
     public void deleteSummary(Long id) {
         summaryRepository.deleteById(id);
     }
 
-    // Buscar resumos por categoria específica
     public List<SummaryEntity> findByCategoriesContaining(String category) {
         return summaryRepository.findByCategoriesContaining(category);
     }
 
-    // Buscar resumos por título do tópico associado
     public List<SummaryEntity> findByTopicTitle(String topicTitle) {
         return summaryRepository.findByTopicTitle(topicTitle);
     }
 
-    // Buscar resumos paginados por título do tópico associado
     public Page<SummaryEntity> findByTopicTitle(String topicTitle, Pageable pageable) {
         return summaryRepository.findByTopicTitle(topicTitle, pageable);
     }
 
-    // Buscar resumos paginados por categoria específica
     public Page<SummaryEntity> findByCategoriesContaining(String category, Pageable pageable) {
         return summaryRepository.findByCategoriesContaining(category, pageable);
     }
