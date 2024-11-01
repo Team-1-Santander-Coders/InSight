@@ -8,7 +8,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@Mapper(componentModel = "spring", uses={PreferenceMapper.class})
+@Mapper(componentModel = "spring")
 public abstract class UserMapper {
     @Autowired
     private UserRepository userRepository;
