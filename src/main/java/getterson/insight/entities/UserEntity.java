@@ -37,7 +37,11 @@ public class UserEntity {
     private String password;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<PreferenceEntity> preferences;
+    private List<TopicPreferenceEntity> topicPreferenceList;
+
+    @Column(nullable = false)
+    @OneToOne
+    private UserPreferenceEntity userPreferenceEntity;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
