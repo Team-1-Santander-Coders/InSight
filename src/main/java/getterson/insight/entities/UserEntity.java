@@ -16,7 +16,7 @@ import java.util.List;
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(nullable = false)
     private String name;
@@ -24,20 +24,23 @@ public class UserEntity {
     @Column(nullable = false)
     private String username;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String document;
 
     @Column(nullable = false)
     private LocalDate birthDate;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String email;
 
     @Column(nullable = false)
     private String password;
 
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private UserPreferenceEntity userPreference;
+
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<PreferenceEntity> preferences;
+    private List<TopicPreferenceEntity> preferences;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

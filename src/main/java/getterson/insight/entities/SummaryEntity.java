@@ -25,6 +25,4 @@ public class SummaryEntity {
     @ManyToOne
     @JoinColumn (name = "topic_id")
     private TopicEntity topic;
-
-    
 }
