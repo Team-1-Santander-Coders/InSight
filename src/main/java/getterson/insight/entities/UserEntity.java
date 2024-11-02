@@ -36,6 +36,15 @@ public class UserEntity {
     @Column(nullable = false)
     private String password;
 
+    public UserEntity(){}
+
+    public UserEntity(String name, String username, String document, LocalDate birthDate, String email, String password) {
+        this.name = name;
+        this.username = username;
+        this.document = document;
+        this.birthDate = birthDate;
+    }
+
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private UserPreferenceEntity userPreference;
 
