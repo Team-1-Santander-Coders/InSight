@@ -36,8 +36,6 @@ public class UserEntity {
     @Column(nullable = false)
     private String password;
 
-    public UserEntity(){}
-
     public UserEntity(String name, String username, String document, LocalDate birthDate, String email, String password) {
         this.name = name;
         this.username = username;
@@ -55,8 +53,6 @@ public class UserEntity {
     @Column(nullable = false)
     @OneToOne
     private UserPreferenceEntity userPreferenceEntity;
-
-
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
