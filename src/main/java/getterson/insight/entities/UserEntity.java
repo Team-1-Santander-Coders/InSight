@@ -40,7 +40,14 @@ public class UserEntity {
     private UserPreferenceEntity userPreference;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<TopicPreferenceEntity> preferences;
+
+    private List<TopicPreferenceEntity> topicPreferenceList;
+
+    @Column(nullable = false)
+    @OneToOne
+    private UserPreferenceEntity userPreferenceEntity;
+
+
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
