@@ -1,6 +1,7 @@
 package getterson.insight.services;
 
 import getterson.insight.entities.UserEntity;
+import getterson.insight.entities.UserPreferenceEntity;
 import getterson.insight.exceptions.user.DuplicatedUserException;
 import getterson.insight.exceptions.user.InvalidPasswordException;
 import getterson.insight.exceptions.user.InvalidUserDataException;
@@ -64,4 +65,8 @@ public class UserService {
         return userEntityOptional.get();
     }
 
+    public UserEntity setUserPreference(UserEntity userEntity, UserPreferenceEntity userPreferenceEntity){
+        userEntity.setUserPreference(userPreferenceEntity);
+        return save(userEntity);
+    }
 }
