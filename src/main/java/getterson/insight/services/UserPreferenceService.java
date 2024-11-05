@@ -13,15 +13,16 @@ public class UserPreferenceService {
     @Autowired
     private UserPreferenceRepository userPreferenceRepository;
 
-    @Autowired
-    private UserPreferenceMapper userPreferenceMapper;
+
+    private UserPreferenceMapper userPreferenceMapper = new UserPreferenceMapper() {
+    };
 
     public UserPreferenceEntity createUserPreferenceEntity(UserEntity user) {
         UserPreferenceEntity entity = new UserPreferenceEntity(user);
         return userPreferenceRepository.saveAndFlush(entity);
     }
 
-    public UserPreferenceDTO updateUserPreference(UserPreferenceDTO userPreferenceDTO) {
+    public UserPreferenceDTO updateUserPreference(UserPreferenceDTO userPreferenceDTO) throws Exception {
         UserPreferenceEntity userPreference = userPreferenceMapper.toEntity(userPreferenceDTO);
         userPreference = userPreferenceRepository.saveAndFlush(userPreference);
 
