@@ -1,4 +1,6 @@
 package getterson.insight.repositories;
 
-public interface SummaryDataRepository {
-}
+import getterson.insight.entities.SummaryDataEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SummaryDataRepository extends JpaRepository <SummaryDataEntity, Long> {}
