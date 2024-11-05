@@ -1,6 +1,4 @@
 package getterson.insight.services;
-
-
 import getterson.insight.dtos.SummaryDataDTO;
 import getterson.insight.entities.SummaryDataEntity;
 import getterson.insight.repositories.SummaryDataRepository;
@@ -14,6 +12,7 @@ import java.util.Optional;
 public class SummaryDataService {
     @Autowired
     private SummaryDataRepository summaryDataRepository;
+  
     @Autowired
     private SummaryRepository summaryRepository;
 

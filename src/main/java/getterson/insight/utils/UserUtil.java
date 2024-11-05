@@ -6,7 +6,6 @@ import getterson.insight.exceptions.user.InvalidPasswordException;
 import java.util.regex.Pattern;
 
 public class UserUtil {
-
     private static final String EMAIL_REGEX = "^[A-Za-z0-9+_.-]+@(.+)$";
     private static final Pattern EMAIL_PATTERN = Pattern.compile(EMAIL_REGEX);
 
