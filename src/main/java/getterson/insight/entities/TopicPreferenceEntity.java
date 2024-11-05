@@ -15,7 +15,7 @@ import java.util.Objects;
 public class TopicPreferenceEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private boolean sendNewsLetter;
 
@@ -37,6 +37,8 @@ public class TopicPreferenceEntity {
         this.topicEntity = topic;
         this.type = PreferenceType.TOPIC;
     }
+
+
 
     @Override
     public boolean equals(Object o) {
