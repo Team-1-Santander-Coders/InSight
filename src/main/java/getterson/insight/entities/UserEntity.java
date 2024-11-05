@@ -40,12 +40,31 @@ public class UserEntity {
     private UserPreferenceEntity userPreference;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<TopicPreferenceEntity> preferences;
+    private List<TopicPreferenceEntity> topicPreferenceList;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<TopicEntity> topicList;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private UserType type;
 
+
+
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<TokenEntity> tokens;
+
+    public UserEntity(String name, String username, String document, LocalDate birthDate, String email, String password, UserType type) {
+        this.name = name;
+        this.username = username;
+        this.document = document;
+        this.birthDate = birthDate;
+        this.email = email;
+        this.password = password;
+        this.type = type;
+    }
+
+
+
+
 }
