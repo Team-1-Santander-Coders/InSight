@@ -24,8 +24,11 @@ public class TopicPreferenceService {
         return topicPreferenceRepository.findAllByUserIdAsDTO(userId);
     }
 
-    public Optional<TopicPreferenceEntity> getById(long id) {
-        return topicPreferenceRepository.findById(id);
+    public TopicPreferenceEntity getById(long id) throws Exception {
+        Optional<TopicPreferenceEntity> topicPreferenceEntity = topicPreferenceRepository.findById(id);
+        if(topicPreferenceEntity.isPresent()) return topicPreferenceEntity.get();
+
+        throw new Exception("TopicPreference não encontrado");
     }
 
     public TopicPreferenceEntity createTopicPreference(UserEntity user, TopicEntity topic) {
@@ -33,7 +36,7 @@ public class TopicPreferenceService {
         return topicPreferenceRepository.saveAndFlush(entity);
     }
 
-    public TopicPreferenceDTO updateTopicPreference(TopicPreferenceDTO topicPreferenceDTO) {
+    public TopicPreferenceDTO updateTopicPreference(TopicPreferenceDTO topicPreferenceDTO) throws Exception {
         TopicPreferenceEntity topicPreference = topicPreferenceMapper.toEntity(topicPreferenceDTO);
         topicPreference = topicPreferenceRepository.saveAndFlush(topicPreference);
 
