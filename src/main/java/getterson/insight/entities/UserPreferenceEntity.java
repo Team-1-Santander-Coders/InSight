@@ -17,14 +17,13 @@ import java.util.Objects;
 public class UserPreferenceEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @ElementCollection
     private List<String> blackListWords;
 
     @OneToOne
     @JoinColumn(name = "user_id")
-    @Column(nullable = false, unique = true)
     private UserEntity user;
 
     @Enumerated(EnumType.STRING)
@@ -47,5 +46,11 @@ public class UserPreferenceEntity {
     @Override
     public int hashCode() {
         return Objects.hashCode(user);
+    }
+
+    public UserPreferenceEntity(List<String> blackListWords, UserEntity user, PreferenceType type){
+        this.blackListWords = blackListWords;
+        this.user = user;
+        this.type = type;
     }
 }

@@ -1,5 +1,6 @@
 package getterson.insight.services;
 
+import getterson.insight.entities.TopicPreferenceEntity;
 import getterson.insight.entities.UserEntity;
 import getterson.insight.entities.UserPreferenceEntity;
 import getterson.insight.exceptions.user.DuplicatedUserException;
@@ -13,6 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -24,12 +27,14 @@ public class UserService {
             Optional<String> documentOptional = DocumentUtil.validateAndClearDocument(document);
             if(documentOptional.isEmpty()) throw new IllegalArgumentException("Documento não é valido.");
 
+
             UserEntity userEntity = new UserEntity(name,
                     username,
                     documentOptional.get(),
                     birthDate,
                     email,
-                    UserUtil.validatePassword(password));
+                    UserUtil.validatePassword(password),
+                    DocumentUtil.getTypeByDocument(document).get());
 
             if (isRegistred(userEntity)) throw new DuplicatedUserException();
             return save(userEntity);
@@ -59,14 +64,22 @@ public class UserService {
     }
 
     public UserEntity getUserByUsername(String username) throws UserNotFoundException {
-        Optional<UserEntity> userEntityOptional = userRepository.findByEmail(username);
-        if(userEntityOptional.isEmpty()) throw new UserNotFoundException();
-
-        return userEntityOptional.get();
+        Optional<UserEntity> userEntityOptional = userRepository.findByUsername(username);
+        if(userEntityOptional.isPresent())  return userEntityOptional.get();
+        throw new UserNotFoundException();
     }
 
-    public UserEntity setUserPreference(UserEntity userEntity, UserPreferenceEntity userPreferenceEntity){
+    public void setUserPreference(UserEntity userEntity, UserPreferenceEntity userPreferenceEntity){
         userEntity.setUserPreference(userPreferenceEntity);
-        return save(userEntity);
+        save(userEntity);
+    }
+
+    public void addUserTopicPreference(UserEntity userEntity, TopicPreferenceEntity topicPreferenceEntity){
+        List<TopicPreferenceEntity> topicPreferenceEntityList = userEntity.getTopicPreferenceList();
+        if(topicPreferenceEntityList == null) topicPreferenceEntityList = new ArrayList<>();
+        topicPreferenceEntityList.add(topicPreferenceEntity);
+
+        userEntity.setTopicPreferenceList(topicPreferenceEntityList);
+        save(userEntity);
     }
 }

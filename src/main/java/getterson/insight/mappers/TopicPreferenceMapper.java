@@ -2,24 +2,30 @@ package getterson.insight.mappers;
 
 import getterson.insight.dtos.TopicPreferenceDTO;
 import getterson.insight.entities.TopicPreferenceEntity;
-import getterson.insight.entities.UserEntity;
+import getterson.insight.repositories.TopicPreferenceRepository;
 import getterson.insight.repositories.UserRepository;
-import jakarta.persistence.EntityNotFoundException;
-import org.mapstruct.*;
-import org.springframework.beans.factory.annotation.Autowired;
 
-@Mapper(componentModel = "spring")
-public abstract class TopicPreferenceMapper {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import java.util.Optional;
+
+@Component
+public class TopicPreferenceMapper implements Mapper<TopicPreferenceEntity, TopicPreferenceDTO> {
     @Autowired
     private UserRepository userRepository;
 
-    @Mapping(target = "user", expression = "java(mapUserIdToUser(topicPreferenceDTO.userId()))")
-    public abstract TopicPreferenceEntity toEntity(TopicPreferenceDTO topicPreferenceDTO);
+    @Autowired
+    private TopicPreferenceRepository topicPreferenceRepository;
 
-    @Mapping(target = "user.id", source = "userId")
-    public abstract TopicPreferenceDTO toDTO(TopicPreferenceEntity topicPreferenceEntity);
+    public  TopicPreferenceDTO toDTO(TopicPreferenceEntity topicPreferenceEntity){
+        return new TopicPreferenceDTO(topicPreferenceEntity.getId(), topicPreferenceEntity.getUser().getId(), topicPreferenceEntity.isSendNewsLetter(),topicPreferenceEntity.getType());
+    };
 
-    protected UserEntity mapUserIdToUser(long userId) {
-        return userRepository.findById(userId).orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado para o ID: " + userId));
-    }
+    public  TopicPreferenceEntity toEntity(TopicPreferenceDTO topicPreferenceDTO) throws Exception {
+        Optional<TopicPreferenceEntity> topicPreferenceEntity = topicPreferenceRepository.findById(topicPreferenceDTO.id());
+
+        if(topicPreferenceEntity.isPresent()) return topicPreferenceEntity.get();
+        else throw new Exception("TopicPreference não encontrado");
+    };
 }

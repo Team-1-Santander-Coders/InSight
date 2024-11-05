@@ -4,20 +4,30 @@ import getterson.insight.dtos.UserDTO;
 import getterson.insight.entities.UserEntity;
 import getterson.insight.repositories.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.springframework.beans.factory.annotation.Autowired;
 
-@Mapper(componentModel = "spring")
-public abstract class UserMapper {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import java.util.Optional;
+
+@Component
+public class UserMapper implements Mapper<UserEntity, UserDTO>{
     @Autowired
     private UserRepository userRepository;
+    private final TopicMapper topicMapper = new TopicMapper();
+    private final TopicPreferenceMapper topicPreferenceMapper = new TopicPreferenceMapper();
 
-    @Mapping(target = "user", expression = "java(mapUserIdToUser(userDTO.id()))")
-    public abstract UserEntity UserDTOToUserEntity(UserDTO userDTO);
-    public abstract UserDTO userToUserDTO(UserEntity user);
+    public  UserDTO toDTO(UserEntity userEntity){
+        return new UserDTO( userEntity.getName(),
+                            userEntity.getUsername(),
+                            userEntity.getDocument(),
+                            topicPreferenceMapper.toDTO(userEntity.getTopicPreferenceList()),
+                            topicMapper.toDTO(userEntity.getTopicList()));
+    }
 
-    protected UserEntity mapUseIdToUser(Long id){
-        return userRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado para o ID: " + id));
+    public UserEntity toEntity(UserDTO userDTO){
+        Optional<UserEntity> userEntity = userRepository.findByDocument(userDTO.document());
+        if(userEntity.isPresent()) return userEntity.get();
+        throw new EntityNotFoundException("Usuário não encontrado");
     }
 }

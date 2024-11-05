@@ -36,28 +36,35 @@ public class UserEntity {
     @Column(nullable = false)
     private String password;
 
-    public UserEntity(String name, String username, String document, LocalDate birthDate, String email, String password) {
-        this.name = name;
-        this.username = username;
-        this.document = document;
-        this.birthDate = birthDate;
-    }
-
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private UserPreferenceEntity userPreference;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-
     private List<TopicPreferenceEntity> topicPreferenceList;
 
-    @Column(nullable = false)
-    @OneToOne
-    private UserPreferenceEntity userPreferenceEntity;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<TopicEntity> topicList;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private UserType type;
 
+
+
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<TokenEntity> tokens;
+
+    public UserEntity(String name, String username, String document, LocalDate birthDate, String email, String password, UserType type) {
+        this.name = name;
+        this.username = username;
+        this.document = document;
+        this.birthDate = birthDate;
+        this.email = email;
+        this.password = password;
+        this.type = type;
+    }
+
+
+
+
 }
