@@ -13,8 +13,6 @@ import java.util.Optional;
 
 @Service
 public class SummaryDataService {
-
-
     private final SummaryDataRepository summaryDataRepository;
 
     @Autowired
