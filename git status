@@ -1,0 +1,272 @@
+[33mcommit 387da5d8095b0c1a4c530deb0efc4b8c7b10cf3e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtopic-repository[m[33m, [m[1;32mmain[m[33m)[m
+Author: Lucas Moraes <lsmoraes16.lm@gmail.com>
+Date:   Tue Nov 5 23:46:17 2024 -0300
+
+    feat: add topic repository
+
+[33mcommit 9536220f946d7083e82633bfa3f53d2d3cc3409a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mtopic_mapper[m[33m)[m
+Merge: b1c58c6 691958b
+Author: Alecsandro Schopf Auer Jr. <54159302+aleschopf@users.noreply.github.com>
+Date:   Tue Nov 5 22:08:11 2024 -0300
+
+    fix: fix summary data repository (PR)
+    
+    fix: fix summary data repository
+
+[33mcommit 691958bb88596ea3829fd2d9cfb76a61642a1d74[m
+Merge: ba4b01b b1c58c6
+Author: Alecsandro Schopf Auer Jr. <54159302+aleschopf@users.noreply.github.com>
+Date:   Tue Nov 5 22:07:56 2024 -0300
+
+    Merge branch 'main' into collector
+
+[33mcommit ba4b01bdcbcfb4a2a60279ae1624ada3302f0758[m
+Author: Alecsandro Schopf Auer Jr. <54159302+aleschopf@users.noreply.github.com>
+Date:   Tue Nov 5 22:05:45 2024 -0300
+
+    update SummaryDataService.java
+
+[33mcommit 6fd5a91238002e1a8e6d65039be70099518e82a8[m
+Author: Alecsandro Schopf Auer Jr. <54159302+aleschopf@users.noreply.github.com>
+Date:   Tue Nov 5 22:05:29 2024 -0300
+
+    update SummaryDataRepository.java
+
+[33mcommit 8ea7478d6efe4b395145fe11ecfa371a8491eeb5[m
+Author: Alecsandro Schopf Auer Junior <alexschopf05@gmail.com>
+Date:   Tue Nov 5 22:04:22 2024 -0300
+
+    fix: fix summary data repository
+
+[33mcommit b1c58c68a3effe235aff1100b5b6897c466554b2[m
+Merge: 6649c41 344b831
+Author: Alecsandro Schopf Auer Jr. <54159302+aleschopf@users.noreply.github.com>
+Date:   Tue Nov 5 15:31:28 2024 -0300
+
+    refactor: change structure
+    
+    Collector
+
+[33mcommit 344b831002abec1eced1f070e284899202aaced2[m
+Merge: 4b62014 6649c41
+Author: Alecsandro Schopf Auer Jr. <54159302+aleschopf@users.noreply.github.com>
+Date:   Tue Nov 5 15:30:33 2024 -0300
+
+    Merge branch 'main' into collector
+
+[33mcommit 4b6201411cead397f89a9148957b9c9f990383c5[m
+Author: Alecsandro Schopf Auer Junior <alexschopf05@gmail.com>
+Date:   Tue Nov 5 15:15:06 2024 -0300
+
+    refactor: change project structure
+
+[33mcommit 6649c419b0aa44a30db0cc74f04aaefc3b940d7b[m
+Merge: bdfee6a 196d446
+Author: Matheus Lima Moreira <102155883+mathlimam@users.noreply.github.com>
+Date:   Mon Nov 4 21:42:33 2024 -0300
+
+    Merge pull request #38 from Team-1-Santander-Coders/mappers
+    
+    Mappers
+
+[33mcommit 196d44665dff210c736504b8fe1b70cbfc119446[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:38:00 2024 -0300
+
+    refact: update GenerateAudio
+
+[33mcommit 24abdbe11e92432ef580b730dc3fc1a0d8a19fd1[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:37:21 2024 -0300
+
+    refact: update GenerateSummary
+
+[33mcommit 9e36b4a9ddf5e0300c8832e62db8c1a292bfcc5f[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:34:59 2024 -0300
+
+    refact: update SummaryDataDTO
+
+[33mcommit 3f3c8f8bb14187e6846ea3270b99bd16fd385e60[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:34:16 2024 -0300
+
+    refact: update SummaryDataEntity
+
+[33mcommit b3c862b7e9d9b929f47510e743ae3970602e78a3[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:33:41 2024 -0300
+
+    refact: update SummaryDataMapper
+
+[33mcommit dbeb1ba2c56c48a97aeb586fb5048de60e028ad4[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:33:00 2024 -0300
+
+    refact: update SummaryDataRepository
+
+[33mcommit 0978c156aa4fadd0f653542424ff6bb4b0434441[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:32:37 2024 -0300
+
+    refact: update SummaryDataService
+
+[33mcommit b574b2edd8af8acfc237f3b0175564b585fb7e7a[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:31:15 2024 -0300
+
+    refact: update SummaryDTO
+
+[33mcommit ebefb61f1bacd271b33353dabf4f63e2d7455659[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:30:42 2024 -0300
+
+    refact: update SummaryEntity
+
+[33mcommit 41ca72bdb4e4ec1048c6f43fd17661050f13154e[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:30:02 2024 -0300
+
+    refact: update SummaryMapper
+
+[33mcommit 313f889ad37c022a83e21f8d0194523c35bddd7b[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:29:29 2024 -0300
+
+    refact: update SummaryRepository
+
+[33mcommit 7047c74421dd5964975a7c20a9ccef4f83f39d6c[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:28:48 2024 -0300
+
+    refact: update SummaryService
+
+[33mcommit 425d087b3b19e44f63d3b0027878cfb5a2ec4f15[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:27:06 2024 -0300
+
+    refact: update TopicDTO
+
+[33mcommit 5ba6b767331fbb176afcbfe65a3cc2c16214582f[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:26:38 2024 -0300
+
+    refact: update TopicEntity
+
+[33mcommit d190bb535864feccd69b563a633872749a53f69e[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:23:00 2024 -0300
+
+    refact: update TopicMapper
+
+[33mcommit e24736c75ae19c4520963c15f97ed9cf3875945a[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:22:32 2024 -0300
+
+    refact: update TopicPreferenceDTO
+
+[33mcommit c4b9b05a0ef5eb9d295ce6556ccc7cc05e4e8bef[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:22:06 2024 -0300
+
+    refact: update TopicPreferenceEntity
+
+[33mcommit 66078bdb42c8ac14593371fd7b9217aeb37096cc[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:21:15 2024 -0300
+
+    refact: update TopicPreferenceMapper
+
+[33mcommit 85cbc73a0552ded2c2104797a6ce54491db238db[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:20:45 2024 -0300
+
+    refact: update TopicPreferenceService
+
+[33mcommit 4c3ffb181bf496b00466ac9043d32617e3aaf97f[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:19:57 2024 -0300
+
+    refact: update TopicRepository
+
+[33mcommit 42e8745dc0c2ba0ee4d9f552c00165feb3e20f3f[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:19:18 2024 -0300
+
+    refact: update TopicService
+
+[33mcommit d988fbcfa0befb933fba2518139e5d6f83d56cdc[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:18:31 2024 -0300
+
+    feat: first UserController commit
+
+[33mcommit 7727c04b86770f9aa88f21e1a76e35c795fbc40d[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:17:18 2024 -0300
+
+    refact: update UserDTO
+
+[33mcommit d06384e7e44c0019a02a42193276679214ff51ff[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:16:38 2024 -0300
+
+    refact: update UserEntity
+
+[33mcommit f6fbb4b0b80e29922f495163bfd098a3b09a1ccc[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:15:15 2024 -0300
+
+    refact: update UserMapper
+
+[33mcommit cb29314909a3eea73bdfd7b000f4e74787d03857[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:14:12 2024 -0300
+
+    refact: update UserPreferenceDTO
+
+[33mcommit 35c9dcd3678f5565d42172d02960a9c07890f2c8[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:13:26 2024 -0300
+
+    refact: update UserPreferenceEntity
+
+[33mcommit b464a780cb17879b23a6da0131a731a1f35fa0d0[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:12:30 2024 -0300
+
+    refact: update UserPreferenceMapper
+
+[33mcommit c50fcf482417a945f24849182e13c5bee4bd8b3b[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:11:17 2024 -0300
+
+    refact: update UserPreferenceService
+
+[33mcommit 4618e1fba173a8fb965788f94d4d9a857bfd4cc7[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:10:22 2024 -0300
+
+    refact: update UserService
+
+[33mcommit 08a4f1d7f9064073d8b619239535e9338ad9045c[m
+Author: Math <math.lima.m@gmail.com>
+Date:   Mon Nov 4 21:09:03 2024 -0300
+
+    feat: add Mapper interface
+
+[33mcommit bdfee6acbafd340a56b3a0ba6ca7c20bfd8be2ba[m
+Merge: 29e8d42 f9f833a
+Author: Lucas Moraes <106927402+lsmoraes16@users.noreply.github.com>
+Date:   Sat Nov 2 00:12:46 2024 -0300
+
+    Merge pull request #23 from Team-1-Santander-Coders/topic_mapper
+    
+    Topic mapper
+
+[33mcommit f9f833a971647f22b2a4e38ddf8b4a8d4e519444[m[33m ([m[1;31morigin/topic_mapper[m[33m)[m
+Merge: 9bc357f 29e8d42
+Author: Lucas Moraes <lsmoraes16.lm@gmail.com>
+Date:   Sat Nov 2 00:03:42 2024 -0300
+
+    Merge 
