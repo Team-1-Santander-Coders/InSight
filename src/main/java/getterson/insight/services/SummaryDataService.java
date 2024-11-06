@@ -12,11 +12,9 @@ import java.util.Optional;
 public class SummaryDataService {
     private final SummaryDataRepository summaryDataRepository;
 
-    @Autowired
-    private SummaryDataRepository summaryDataRepository;
-  
-    @Autowired
-    private SummaryRepository summaryRepository;
+    public SummaryDataService(SummaryDataRepository summaryDataRepository) {
+        this.summaryDataRepository = summaryDataRepository;
+    }
 
     public void save(SummaryDataEntity summaryDataEntity) {
         summaryDataRepository.save(summaryDataEntity);
