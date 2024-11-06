@@ -14,15 +14,20 @@ import java.util.List;
 public class SummaryEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @ElementCollection
     private List<String> categories;
 
     @OneToMany(mappedBy = "summary", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<SummaryDataEntity> summaryData;
+    private List<SummaryDataEntity> summaryDataList;
 
     @ManyToOne
     @JoinColumn (name = "topic_id")
     private TopicEntity topic;
+
+    public SummaryEntity(List<String> categories, TopicEntity topic) {
+        this.categories = categories;
+        this.topic = topic;
+    }
 }

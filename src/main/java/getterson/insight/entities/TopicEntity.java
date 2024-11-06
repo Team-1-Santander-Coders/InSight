@@ -14,11 +14,19 @@ import java.util.List;
 public class TopicEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(nullable = false)
     private String title;
 
     @OneToMany(mappedBy = "topic", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<SummaryEntity> summaries;
+
+    @ManyToOne
+    private UserEntity user;
+
+    public TopicEntity(String title, UserEntity userEntity){
+        this.title = title;
+        this.user = userEntity;
+    }
 }

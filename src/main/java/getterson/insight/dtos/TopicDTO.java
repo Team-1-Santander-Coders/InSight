@@ -1,4 +1,7 @@
 package getterson.insight.dtos;
 
-public record TopicDTO() {
-}
+import java.util.List;
+
+public record TopicDTO(Long id,
+                       String title,
+                       List<SummaryDTO> summaries) {}
