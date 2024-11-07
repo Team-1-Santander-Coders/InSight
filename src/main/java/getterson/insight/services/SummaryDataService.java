@@ -1,12 +1,9 @@
 package getterson.insight.services;
-import getterson.insight.dtos.SummaryDataDTO;
+
 import getterson.insight.entities.SummaryDataEntity;
 import getterson.insight.repositories.SummaryDataRepository;
-import getterson.insight.repositories.SummaryRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import java.util.Optional;
 
+import org.springframework.stereotype.Service;
 
 @Service
 public class SummaryDataService {
@@ -20,10 +17,7 @@ public class SummaryDataService {
         summaryDataRepository.save(summaryDataEntity);
     }
 
-    public SummaryDataEntity findById(Long id) throws Exception {
-        Optional<SummaryDataEntity> summaryDataEntity = summaryDataRepository.findById(id);
-        if(summaryDataEntity.isPresent()) return summaryDataEntity.get();
-
-        throw new Exception("SummaryData nao encontrado");
+    public SummaryDataEntity findById(Long id) {
+        return summaryDataRepository.findById(id).get();
     }
 }

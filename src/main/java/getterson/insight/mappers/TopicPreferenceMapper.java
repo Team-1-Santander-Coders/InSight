@@ -12,20 +12,21 @@ import java.util.Optional;
 
 @Component
 public class TopicPreferenceMapper implements Mapper<TopicPreferenceEntity, TopicPreferenceDTO> {
-    @Autowired
-    private UserRepository userRepository;
 
-    @Autowired
-    private TopicPreferenceRepository topicPreferenceRepository;
+    private final TopicPreferenceRepository topicPreferenceRepository;
 
-    public  TopicPreferenceDTO toDTO(TopicPreferenceEntity topicPreferenceEntity){
+    public TopicPreferenceMapper(TopicPreferenceRepository topicPreferenceRepository) {
+        this.topicPreferenceRepository = topicPreferenceRepository;
+    }
+
+    public TopicPreferenceDTO toDTO(TopicPreferenceEntity topicPreferenceEntity){
         return new TopicPreferenceDTO(topicPreferenceEntity.getId(), topicPreferenceEntity.getUser().getId(), topicPreferenceEntity.isSendNewsLetter(),topicPreferenceEntity.getType());
-    };
+    }
 
-    public  TopicPreferenceEntity toEntity(TopicPreferenceDTO topicPreferenceDTO) throws Exception {
+    public TopicPreferenceEntity toEntity(TopicPreferenceDTO topicPreferenceDTO) throws Exception {
         Optional<TopicPreferenceEntity> topicPreferenceEntity = topicPreferenceRepository.findById(topicPreferenceDTO.id());
 
         if(topicPreferenceEntity.isPresent()) return topicPreferenceEntity.get();
         else throw new Exception("TopicPreference não encontrado");
-    };
+    }
 }
