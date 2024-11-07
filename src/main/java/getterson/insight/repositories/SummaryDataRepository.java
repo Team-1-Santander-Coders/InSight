@@ -9,7 +9,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface SummaryDataRepository extends JpaRepository<SummaryDataEntity, Long> {
-    List<SummaryDataEntity> findByAbout(String about);
     List<SummaryDataEntity> findByDate(LocalDate date);
 
     Page<SummaryDataEntity> findByAbout(String about, Pageable pageable);
