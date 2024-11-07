@@ -11,9 +11,7 @@ import java.util.List;
 public interface SummaryRepository extends JpaRepository<SummaryEntity, Long> {
 
     List<SummaryEntity> findByCategoriesContaining(String category);
-
     List<SummaryEntity> findByTopicTitle(String topicTitle);
-
 
     Page<SummaryEntity> findByCategoriesContaining(String category, Pageable pageable);
     Page<SummaryEntity> findByTopicTitle(String topicTitle, Pageable pageable);
