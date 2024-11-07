@@ -1,7 +1,7 @@
 package getterson.insight.exceptions.user;
 
 public class DuplicatedUserException extends Exception {
-    public DuplicatedUserException(){
-        super("Usuário já cadastrado");
+    public DuplicatedUserException(String message){
+        super(message);
     }
 }

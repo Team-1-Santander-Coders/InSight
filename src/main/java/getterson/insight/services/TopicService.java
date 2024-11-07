@@ -2,7 +2,6 @@ package getterson.insight.services;
 import getterson.insight.entities.TopicEntity;
 import getterson.insight.exceptions.TopicNotFoundException;
 import getterson.insight.repositories.TopicRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

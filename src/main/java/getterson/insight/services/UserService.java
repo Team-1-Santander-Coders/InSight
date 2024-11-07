@@ -7,10 +7,11 @@ import getterson.insight.exceptions.user.DuplicatedUserException;
 import getterson.insight.exceptions.user.InvalidPasswordException;
 import getterson.insight.exceptions.user.InvalidUserDataException;
 import getterson.insight.exceptions.user.UserNotFoundException;
+import getterson.insight.repositories.TopicRepository;
 import getterson.insight.repositories.UserRepository;
 import getterson.insight.utils.DocumentUtil;
 import getterson.insight.utils.UserUtil;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -20,40 +21,62 @@ import java.util.Optional;
 
 @Service
 public class UserService {
-    @Autowired
-    UserRepository userRepository;
 
-    public UserEntity registerUser(String name, String username, String document, LocalDate birthDate, String email, String password) throws DuplicatedUserException, InvalidPasswordException {
-            Optional<String> documentOptional = DocumentUtil.validateAndClearDocument(document);
-            if(documentOptional.isEmpty()) throw new IllegalArgumentException("Documento não é valido.");
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
 
-            UserEntity userEntity = new UserEntity(name,
-                    username,
-                    documentOptional.get(),
-                    birthDate,
-                    email,
-                    UserUtil.validatePassword(password),
-                    DocumentUtil.getTypeByDocument(document).get());
-
-            if (isRegistred(userEntity)) throw new DuplicatedUserException();
-            return save(userEntity);
+    public Optional<UserEntity> findById(long id) {
+        return userRepository.findById(id);
     }
 
     private UserEntity save(UserEntity userEntity){
         return userRepository.saveAndFlush(userEntity);
     }
 
-    private boolean isRegistred(UserEntity userEntity){
-        return userRepository.findAll().stream()
-                .anyMatch(registredUser -> registredUser.equals(userEntity));
+    public UserEntity registerUser(String name, String username, String document, LocalDate birthDate, String email, String rawPassword) throws DuplicatedUserException, InvalidPasswordException {
+        Optional<String> documentOptional = DocumentUtil.validateAndClearDocument(document);
+        if (documentOptional.isEmpty()) throw new IllegalArgumentException("Documento não é valido.");
+        String password = UserUtil.validatePassword(rawPassword);
+
+        UserEntity userEntity = new UserEntity(name,
+                username,
+                documentOptional.get(),
+                birthDate,
+                email,
+                passwordEncoder.encode(password),
+                DocumentUtil.getTypeByDocument(document).get());
+
+        Optional<String> isRegistered = isRegistered(userEntity);
+        if (isRegistered.isPresent()) throw new DuplicatedUserException(isRegistered.get());
+        return save(userEntity);
     }
 
-    public UserEntity validateUserByEmailAndPassword(String email, String password) throws InvalidUserDataException {
-        Optional<UserEntity> userEntityOptional = userRepository.findByEmailAndPassword(email, password);
+    private Optional<String> isRegistered(UserEntity userEntity){
+        boolean isRegistered = userRepository.findAll().stream()
+                .anyMatch(registredUser -> registredUser.equals(userEntity));
+
+        if (isRegistered) {
+            if (userRepository.findByDocument(userEntity.getDocument()).isPresent()) return Optional.of("Já existe um cliente com este documento.");
+            if (userRepository.findByEmail(userEntity.getEmail()).isPresent()) return Optional.of("Já existe um cliente com este email.");
+            if (userRepository.findByUsername(userEntity.getUsername()).isPresent()) return Optional.of("Já existe um cliente com este username.");
+        }
+
+        return Optional.empty();
+    }
+
+    public Optional<UserEntity> validateUserLogin(String email, String rawPassword) throws InvalidUserDataException {
+        Optional<UserEntity> userEntityOptional = userRepository.findByEmail(email);
         if(userEntityOptional.isEmpty()) throw new InvalidUserDataException();
 
-        return userEntityOptional.get();
+        boolean isLoginValid = passwordEncoder.matches(rawPassword, userEntityOptional.get().getPassword());
+
+        if (isLoginValid) return userEntityOptional;
+        return Optional.empty();
     }
 
     public UserEntity getUserByEmail(String email) throws UserNotFoundException {
@@ -74,7 +97,7 @@ public class UserService {
         save(userEntity);
     }
 
-    public void addUserTopicPreference(UserEntity userEntity, TopicPreferenceEntity topicPreferenceEntity){
+    public void addTopicPreference(UserEntity userEntity, TopicPreferenceEntity topicPreferenceEntity){
         List<TopicPreferenceEntity> topicPreferenceEntityList = userEntity.getTopicPreferenceList();
         if(topicPreferenceEntityList == null) topicPreferenceEntityList = new ArrayList<>();
         topicPreferenceEntityList.add(topicPreferenceEntity);

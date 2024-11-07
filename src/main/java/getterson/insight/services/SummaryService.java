@@ -4,7 +4,6 @@ import getterson.insight.entities.SummaryEntity;
 import getterson.insight.repositories.SummaryRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,8 +12,11 @@ import java.util.Optional;
 @Service
 public class SummaryService {
 
-    @Autowired
-    private SummaryRepository summaryRepository;
+    private final SummaryRepository summaryRepository;
+
+    public SummaryService(SummaryRepository summaryRepository) {
+        this.summaryRepository = summaryRepository;
+    }
 
     public SummaryEntity saveSummary(SummaryEntity summaryEntity) {
         return summaryRepository.save(summaryEntity);
@@ -24,11 +26,9 @@ public class SummaryService {
         return summaryRepository.findAll();
     }
 
-    public SummaryEntity findSummaryById(Long id) throws Exception {
+    public SummaryEntity findSummaryById(long id) {
         Optional<SummaryEntity> summaryEntity = summaryRepository.findById(id);
-        if(summaryEntity.isPresent()) return summaryEntity.get();
-
-        throw new Exception("Summary não encontrado");
+        return summaryEntity.get();
     }
 
     public void deleteSummary(Long id) {
