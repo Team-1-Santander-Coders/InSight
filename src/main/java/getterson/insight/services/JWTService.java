@@ -21,15 +21,13 @@ import java.util.Optional;
 @Service
 public class JWTService {
 
-    @Value("${my.secretkey}")
-    private String secretKey;
-
     private final TokenRepository tokenRepository;
     private final String ISSUER = "InSight";
-    private final Algorithm algorithm = Algorithm.HMAC256(secretKey);
+    private final Algorithm algorithm;
 
-    public JWTService(TokenRepository tokenRepository) {
+    public JWTService(@Value("${my.secretkey}") String secretKey, TokenRepository tokenRepository) {
         this.tokenRepository = tokenRepository;
+        this.algorithm = Algorithm.HMAC256(secretKey);
     }
 
     public Optional<TokenResult> getToken(String token) {

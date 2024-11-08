@@ -27,10 +27,10 @@ public class SummaryDataService {
     }
 
     public List<SummaryDataEntity> findByDate(LocalDate date) {
-        return summaryDataRepository.findByDate(date);
+        return summaryDataRepository.findByFinalDate(date);
     }
 
     public Page<SummaryDataEntity> findByDate(LocalDate date, Pageable pageable) {
-        return summaryDataRepository.findByDate(date, pageable);
+        return summaryDataRepository.findByFinalDate(date, pageable);
     }
 }

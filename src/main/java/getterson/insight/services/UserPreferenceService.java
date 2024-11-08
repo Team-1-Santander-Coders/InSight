@@ -6,7 +6,6 @@ import getterson.insight.mappers.UserPreferenceMapper;
 import getterson.insight.repositories.UserPreferenceRepository;
 import org.springframework.stereotype.Service;
 
-
 @Service
 public class UserPreferenceService {
 

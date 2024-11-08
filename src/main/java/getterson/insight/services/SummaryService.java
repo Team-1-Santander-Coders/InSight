@@ -39,7 +39,6 @@ public class SummaryService {
         return summaryRepository.findByCategoriesContaining(category);
     }
 
-
     public List<SummaryEntity> findByTopicTitle(String topicTitle) {
         return summaryRepository.findByTopicTitle(topicTitle);
     }

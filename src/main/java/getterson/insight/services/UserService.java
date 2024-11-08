@@ -7,11 +7,11 @@ import getterson.insight.exceptions.user.DuplicatedUserException;
 import getterson.insight.exceptions.user.InvalidPasswordException;
 import getterson.insight.exceptions.user.InvalidUserDataException;
 import getterson.insight.exceptions.user.UserNotFoundException;
-import getterson.insight.repositories.TopicRepository;
 import getterson.insight.repositories.UserRepository;
 import getterson.insight.utils.DocumentUtil;
 import getterson.insight.utils.UserUtil;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -22,12 +22,12 @@ import java.util.Optional;
 @Service
 public class UserService {
 
+    private final String salt;
     private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder;
 
-    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+    public UserService(UserRepository userRepository, @Value("${my.salt}") String salt) {
         this.userRepository = userRepository;
-        this.passwordEncoder = passwordEncoder;
+        this.salt = salt;
     }
 
     public Optional<UserEntity> findById(long id) {
@@ -48,7 +48,7 @@ public class UserService {
                 documentOptional.get(),
                 birthDate,
                 email,
-                passwordEncoder.encode(password),
+                BCrypt.hashpw(password, salt),
                 DocumentUtil.getTypeByDocument(document).get());
 
         Optional<String> isRegistered = isRegistered(userEntity);
@@ -70,13 +70,9 @@ public class UserService {
     }
 
     public Optional<UserEntity> validateUserLogin(String email, String rawPassword) throws InvalidUserDataException {
-        Optional<UserEntity> userEntityOptional = userRepository.findByEmail(email);
+        Optional<UserEntity> userEntityOptional = userRepository.findByEmailAndPassword(email, BCrypt.hashpw(rawPassword, salt));
         if(userEntityOptional.isEmpty()) throw new InvalidUserDataException();
-
-        boolean isLoginValid = passwordEncoder.matches(rawPassword, userEntityOptional.get().getPassword());
-
-        if (isLoginValid) return userEntityOptional;
-        return Optional.empty();
+        return userEntityOptional;
     }
 
     public UserEntity getUserByEmail(String email) throws UserNotFoundException {

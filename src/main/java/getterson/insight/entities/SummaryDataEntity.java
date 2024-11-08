@@ -21,7 +21,10 @@ public class SummaryDataEntity {
     private SummaryEntity summary;
 
     @Column(nullable = false)
-    private LocalDate date;
+    private LocalDate initialDate;
+
+    @Column(nullable = false)
+    private LocalDate finalDate;
 
     @Column(nullable = false)
     private String about;
@@ -35,9 +38,10 @@ public class SummaryDataEntity {
     @Column(nullable = false)
     private String audio;
 
-    public SummaryDataEntity(SummaryEntity summaryEntity, LocalDate date, String about, String details, String image, String audio) {
+    public SummaryDataEntity(SummaryEntity summaryEntity, LocalDate initialDate, LocalDate finalDate, String about, String details, String image, String audio) {
         this.summary = summaryEntity;
-        this.date = date;
+        this.initialDate = initialDate;
+        this.finalDate = finalDate;
         this.about = about;
         this.details = details;
         this.image = image;

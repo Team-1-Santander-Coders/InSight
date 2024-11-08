@@ -29,7 +29,7 @@ public class SummaryDataMapper implements Mapper<SummaryDataEntity, SummaryDataD
     }
 
     private SummaryDataDTO createDTO(SummaryDataEntity summaryDataEntity) {
-        return new SummaryDataDTO(summaryDataEntity.getId(), summaryDataEntity.getDate(), summaryDataEntity.getAbout(), summaryDataEntity.getDetails(), summaryDataEntity.getImage());
+        return new SummaryDataDTO(summaryDataEntity.getId(), summaryDataEntity.getInitialDate(), summaryDataEntity.getFinalDate(), summaryDataEntity.getAbout(), summaryDataEntity.getDetails(), summaryDataEntity.getImage());
     }
 
     public SummaryDataEntity toEntity(SummaryDataDTO summaryDataDTO) {
