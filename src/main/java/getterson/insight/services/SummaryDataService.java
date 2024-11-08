@@ -1,12 +1,14 @@
 package getterson.insight.services;
-import getterson.insight.dtos.SummaryDataDTO;
+
 import getterson.insight.entities.SummaryDataEntity;
 import getterson.insight.repositories.SummaryDataRepository;
-import getterson.insight.repositories.SummaryRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import java.util.Optional;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
+import java.util.List;
 
 @Service
 public class SummaryDataService {
@@ -20,10 +22,15 @@ public class SummaryDataService {
         summaryDataRepository.save(summaryDataEntity);
     }
 
-    public SummaryDataEntity findById(Long id) throws Exception {
-        Optional<SummaryDataEntity> summaryDataEntity = summaryDataRepository.findById(id);
-        if(summaryDataEntity.isPresent()) return summaryDataEntity.get();
+    public SummaryDataEntity findById(Long id) {
+        return summaryDataRepository.findById(id).get();
+    }
 
-        throw new Exception("SummaryData nao encontrado");
+    public List<SummaryDataEntity> findByDate(LocalDate date) {
+        return summaryDataRepository.findByFinalDate(date);
+    }
+
+    public Page<SummaryDataEntity> findByDate(LocalDate date, Pageable pageable) {
+        return summaryDataRepository.findByFinalDate(date, pageable);
     }
 }

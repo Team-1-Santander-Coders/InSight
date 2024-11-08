@@ -4,23 +4,45 @@ import getterson.insight.dtos.SummaryDataDTO;
 import getterson.insight.entities.SummaryDataEntity;
 import getterson.insight.services.SummaryDataService;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 
-import java.util.Optional;
 
 @Component
 public class SummaryDataMapper implements Mapper<SummaryDataEntity, SummaryDataDTO> {
 
-    @Autowired
-    private SummaryDataService summaryDataService;
+    private final SummaryDataService summaryDataService;
 
-    public SummaryDataDTO toDTO(SummaryDataEntity summaryDataEntity){
-        return new SummaryDataDTO(summaryDataEntity.getId(), summaryDataEntity.getDate(), summaryDataEntity.getAbout(), summaryDataEntity.getDetails(), summaryDataEntity.getImage());
+    public SummaryDataMapper(SummaryDataService summaryDataService) {
+        this.summaryDataService = summaryDataService;
     }
 
-    public SummaryDataEntity toEntity(SummaryDataDTO summaryDataDTO) throws Exception {
+    public SummaryDataDTO toDTO(SummaryDataEntity summaryDataEntity){
+        return createDTO(summaryDataEntity);
+    }
+
+    public List<SummaryDataDTO> toDTO(List<SummaryDataEntity> summaryDataEntities) {
+        return summaryDataEntities.stream()
+                .map(this::createDTO)
+                .toList();
+    }
+
+    private SummaryDataDTO createDTO(SummaryDataEntity summaryDataEntity) {
+        return new SummaryDataDTO(summaryDataEntity.getId(), summaryDataEntity.getInitialDate(), summaryDataEntity.getFinalDate(), summaryDataEntity.getAbout(), summaryDataEntity.getDetails(), summaryDataEntity.getImage());
+    }
+
+    public SummaryDataEntity toEntity(SummaryDataDTO summaryDataDTO) {
+        return getEntity(summaryDataDTO);
+    }
+
+    public List<SummaryDataEntity> toEntity(List<SummaryDataDTO> summaryDataDTOS) {
+        return summaryDataDTOS.stream()
+                .map(this::getEntity)
+                .toList();
+    }
+
+    private SummaryDataEntity getEntity(SummaryDataDTO summaryDataDTO) {
         return summaryDataService.findById(summaryDataDTO.id());
     }
 }

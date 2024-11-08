@@ -3,7 +3,8 @@ package getterson.insight.dtos;
 import java.time.LocalDate;
 
 public record SummaryDataDTO(Long id,
-                             LocalDate date,
+                             LocalDate initialDate,
+                             LocalDate finalDate,
                              String about,
                              String details,
                              String image) {}

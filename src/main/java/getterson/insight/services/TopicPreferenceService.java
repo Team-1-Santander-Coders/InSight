@@ -6,7 +6,6 @@ import getterson.insight.entities.TopicPreferenceEntity;
 import getterson.insight.entities.UserEntity;
 import getterson.insight.mappers.TopicPreferenceMapper;
 import getterson.insight.repositories.TopicPreferenceRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,17 +13,19 @@ import java.util.Optional;
 
 @Service
 public class TopicPreferenceService {
-    @Autowired
-    private TopicPreferenceMapper topicPreferenceMapper;
+    private final TopicPreferenceMapper topicPreferenceMapper;
+    private final TopicPreferenceRepository topicPreferenceRepository;
 
-    @Autowired
-    private TopicPreferenceRepository topicPreferenceRepository;
+    public TopicPreferenceService(TopicPreferenceMapper topicPreferenceMapper, TopicPreferenceRepository topicPreferenceRepository) {
+        this.topicPreferenceMapper = topicPreferenceMapper;
+        this.topicPreferenceRepository = topicPreferenceRepository;
+    }
 
-    public List<TopicPreferenceDTO> getPreferencesByUserId(long userId) {
+    public List<TopicPreferenceDTO> getPreferenceDTOsByUserId(long userId) {
         return topicPreferenceRepository.findAllByUserIdAsDTO(userId);
     }
 
-    public TopicPreferenceEntity getById(long id) throws Exception {
+    public TopicPreferenceEntity findById(long id) throws Exception {
         Optional<TopicPreferenceEntity> topicPreferenceEntity = topicPreferenceRepository.findById(id);
         if(topicPreferenceEntity.isPresent()) return topicPreferenceEntity.get();
 

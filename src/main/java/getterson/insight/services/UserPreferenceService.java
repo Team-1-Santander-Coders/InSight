@@ -4,18 +4,18 @@ import getterson.insight.dtos.UserPreferenceDTO;
 import getterson.insight.entities.*;
 import getterson.insight.mappers.UserPreferenceMapper;
 import getterson.insight.repositories.UserPreferenceRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 
 @Service
 public class UserPreferenceService {
-    @Autowired
-    private UserPreferenceRepository userPreferenceRepository;
 
+    private final UserPreferenceRepository userPreferenceRepository;
+    private final UserPreferenceMapper userPreferenceMapper;
 
-    private UserPreferenceMapper userPreferenceMapper = new UserPreferenceMapper() {
-    };
+    public UserPreferenceService(UserPreferenceRepository userPreferenceRepository, UserPreferenceMapper userPreferenceMapper) {
+        this.userPreferenceRepository = userPreferenceRepository;
+        this.userPreferenceMapper = userPreferenceMapper;
+    }
 
     public UserPreferenceEntity createUserPreferenceEntity(UserEntity user) {
         UserPreferenceEntity entity = new UserPreferenceEntity(user);

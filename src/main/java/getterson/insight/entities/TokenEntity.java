@@ -10,6 +10,7 @@ import java.time.Instant;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "token")
 public class TokenEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,4 +25,10 @@ public class TokenEntity {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id", nullable = false)
     private UserEntity user;
+
+    public TokenEntity(String token, Instant expirationDate, UserEntity user) {
+        this.token = token;
+        this.expirationDate = expirationDate;
+        this.user = user;
+    }
 }

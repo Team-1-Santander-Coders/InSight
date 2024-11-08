@@ -38,8 +38,6 @@ public class TopicPreferenceEntity {
         this.type = PreferenceType.TOPIC;
     }
 
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
