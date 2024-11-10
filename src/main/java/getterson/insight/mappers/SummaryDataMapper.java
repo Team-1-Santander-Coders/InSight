@@ -36,8 +36,19 @@ public class SummaryDataMapper implements Mapper<SummaryDataEntity, SummaryDataD
     }
 
     private SummaryDataDTO createDTO(SummaryDataEntity summaryDataEntity) {
-        return new SummaryDataDTO(summaryDataEntity.getId(), summaryDataEntity.getInitialDate(), summaryDataEntity.getFinalDate(), summaryDataEntity.getDescription(), summaryDataEntity.getSummary(), summaryDataEntity.getImage());
+        return new SummaryDataDTO(
+                summaryDataEntity.getId(),
+                summaryDataEntity.getInitialDate(),
+                summaryDataEntity.getFinalDate(),
+                summaryDataEntity.getDescription(),
+                summaryDataEntity.getSummary(),
+                summaryDataEntity.getImage(),
+                summaryDataEntity.getAudio(),
+                summaryDataEntity.getReferences(),
+                summaryDataEntity.getCategories()
+        );
     }
+
 
     public SummaryDataEntity toEntity(SummaryDataDTO summaryDataDTO) {
         return getEntity(summaryDataDTO);
