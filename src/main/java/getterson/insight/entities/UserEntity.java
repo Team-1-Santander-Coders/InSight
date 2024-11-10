@@ -53,6 +53,9 @@ public class UserEntity {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<TokenEntity> tokens;
 
+    @Column(nullable = false)
+    private String phone;
+
     public UserEntity(String name, String username, String document, LocalDate birthDate, String email, String password, UserType type) {
         this.name = name;
         this.username = username;

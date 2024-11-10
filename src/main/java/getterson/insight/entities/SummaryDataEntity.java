@@ -4,9 +4,9 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -15,10 +15,6 @@ public class SummaryDataEntity {
     @Id
     private String id;
 
-    @ManyToOne
-    @JoinColumn(name = "summary_id")
-    private SummaryEntity summary;
-
     @Column(nullable = false)
     private LocalDate initialDate;
 
@@ -26,10 +22,10 @@ public class SummaryDataEntity {
     private LocalDate finalDate;
 
     @Column(nullable = false)
-    private String about;
+    private String description;
 
     @Column(nullable = false)
-    private String details;
+    private String summary;
 
     @Column(nullable = false)
     private String image;
@@ -37,16 +33,14 @@ public class SummaryDataEntity {
     @Column(nullable = false)
     private String audio;
 
-    @Column
-    private boolean isAudioGenerated = false;
+    @Column(nullable = false)
+    @ElementCollection
+    private List<String> references;
 
-    public SummaryDataEntity(SummaryEntity summaryEntity, LocalDate initialDate, LocalDate finalDate, String about, String details, String image, String audio) {
-        this.summary = summaryEntity;
-        this.initialDate = initialDate;
-        this.finalDate = finalDate;
-        this.about = about;
-        this.details = details;
-        this.image = image;
-        this.audio = audio;
-    }
+    @ElementCollection
+    private List<String> categories;
+
+    @ManyToOne
+    @JoinColumn (name = "topic_id")
+    private TopicEntity topic;
 }
