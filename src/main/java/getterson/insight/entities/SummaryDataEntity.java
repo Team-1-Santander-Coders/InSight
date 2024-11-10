@@ -13,8 +13,7 @@ import java.time.LocalDate;
 @Table(name = "summary_data")
 public class SummaryDataEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
     @ManyToOne
     @JoinColumn(name = "summary_id")
@@ -37,6 +36,9 @@ public class SummaryDataEntity {
 
     @Column(nullable = false)
     private String audio;
+
+    @Column
+    private boolean isAudioGenerated = false;
 
     public SummaryDataEntity(SummaryEntity summaryEntity, LocalDate initialDate, LocalDate finalDate, String about, String details, String image, String audio) {
         this.summary = summaryEntity;

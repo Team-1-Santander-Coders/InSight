@@ -22,7 +22,7 @@ public class SummaryDataService {
         summaryDataRepository.save(summaryDataEntity);
     }
 
-    public SummaryDataEntity findById(Long id) {
+    public SummaryDataEntity findById(String id) {
         return summaryDataRepository.findById(id).get();
     }
 

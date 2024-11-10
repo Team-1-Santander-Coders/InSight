@@ -1,7 +1,8 @@
 package getterson.insight.services;
 
-import getterson.insight.dtos.GeneratedSummaryDTO;
+import getterson.insight.dtos.GeneratedSummary;
 import getterson.insight.dtos.SummaryRequestDTO;
+import getterson.insight.entities.TopicEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.scheduler.Schedulers;
@@ -21,10 +22,10 @@ public class CollectorService {
                 .uri("/summarize")
                 .bodyValue(summaryRequest)
                 .retrieve()
-                .bodyToMono(GeneratedSummaryDTO.class)
+                .bodyToMono(GeneratedSummary.class)
                 .subscribeOn(Schedulers.boundedElastic())
                 .subscribe(
-                        summarizedData -> System.out.println(summarizedData.summary()),
+                        summarizedData -> System.out.println(summarizedData.id() + "\n" + summarizedData.summary()),
                         error -> error.printStackTrace());
     }
 }

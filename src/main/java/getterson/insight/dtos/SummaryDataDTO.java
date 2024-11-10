@@ -2,7 +2,7 @@ package getterson.insight.dtos;
 
 import java.time.LocalDate;
 
-public record SummaryDataDTO(Long id,
+public record SummaryDataDTO(String id,
                              LocalDate initialDate,
                              LocalDate finalDate,
                              String about,

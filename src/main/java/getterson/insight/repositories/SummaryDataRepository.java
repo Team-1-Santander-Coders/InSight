@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.time.LocalDate;
 import java.util.List;
 
-public interface SummaryDataRepository extends JpaRepository<SummaryDataEntity, Long> {
+public interface SummaryDataRepository extends JpaRepository<SummaryDataEntity, String> {
 
     List<SummaryDataEntity> findByFinalDate(LocalDate date);
 
