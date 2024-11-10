@@ -50,7 +50,7 @@ public class SummaryDataMapper implements Mapper<SummaryDataEntity, SummaryDataD
     }
 
     private SummaryDataEntity getEntity(SummaryDataDTO summaryDataDTO) {
-        return summaryDataService.findById(summaryDataDTO.id());
+        return summaryDataService.findById(summaryDataDTO.id()).get();
     }
 
     public SummaryDataEntity convertGeneratedSummaryToSummaryDataEntity(String topicTitle, LocalDate initialDate, LocalDate finalDate, GeneratedSummary generatedSummary) {

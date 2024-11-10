@@ -1,5 +1,6 @@
 package getterson.insight.services;
 
+import getterson.insight.dtos.SummarySimpleDataDTO;
 import getterson.insight.entities.TopicPreferenceEntity;
 import getterson.insight.entities.UserEntity;
 import getterson.insight.entities.UserPreferenceEntity;
@@ -67,6 +68,10 @@ public class UserService {
         }
 
         return Optional.empty();
+    }
+
+    public Optional<List<SummarySimpleDataDTO>> findAllAsSimpleDTO(Long id){
+        return userRepository.findAllAsSimpleDTO(id);
     }
 
     public Optional<UserEntity> validateUserLogin(String email, String rawPassword) throws InvalidUserDataException {

@@ -52,4 +52,5 @@ public class UserPreferenceEntity {
         this.user = user;
         this.type = type;
     }
+
 }
