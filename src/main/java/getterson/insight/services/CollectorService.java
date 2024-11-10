@@ -2,22 +2,29 @@ package getterson.insight.services;
 
 import getterson.insight.dtos.GeneratedSummary;
 import getterson.insight.dtos.SummaryRequestDTO;
-import getterson.insight.entities.TopicEntity;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.scheduler.Schedulers;
+
+import static getterson.insight.utils.DateUtil.ISO8601_DATE_PATTERN;
+import static getterson.insight.utils.DateUtil.stringToDate;
 
 @Service
 public class CollectorService {
 
     private final WebClient webClient;
+    private final SummaryDataService summaryDataService;
+    private static final Logger logger = LoggerFactory.getLogger(CollectorService.class);
 
-    public CollectorService(WebClient webClient) {
+    public CollectorService(WebClient webClient, SummaryDataService summaryDataService) {
         this.webClient = webClient;
+        this.summaryDataService = summaryDataService;
     }
 
-    public void collectData(String topic, String initialDate, String finalDate) {
-        SummaryRequestDTO summaryRequest = new SummaryRequestDTO(topic, initialDate, finalDate);
+    public void collectData(String topicTitle, String initialDate, String finalDate) {
+        SummaryRequestDTO summaryRequest = new SummaryRequestDTO(topicTitle, initialDate, finalDate);
         webClient.post()
                 .uri("/summarize")
                 .bodyValue(summaryRequest)
@@ -25,7 +32,7 @@ public class CollectorService {
                 .bodyToMono(GeneratedSummary.class)
                 .subscribeOn(Schedulers.boundedElastic())
                 .subscribe(
-                        summarizedData -> System.out.println(summarizedData.id() + "\n" + summarizedData.summary()),
-                        error -> error.printStackTrace());
+                        summarizedData -> summaryDataService.save(topicTitle, stringToDate(initialDate, ISO8601_DATE_PATTERN), stringToDate(finalDate, ISO8601_DATE_PATTERN), summarizedData, summaryRequest),
+                        error -> logger.error("Erro ao tentar obter o resumo para o tópico {}: {}", topicTitle, error.getMessage()));
     }
 }

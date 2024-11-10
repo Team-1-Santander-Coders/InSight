@@ -9,6 +9,7 @@ import getterson.insight.entities.UserEntity;
 import getterson.insight.mappers.SummaryDataMapper;
 import getterson.insight.repositories.SummaryDataRepository;
 
+import getterson.insight.repositories.TopicRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
@@ -23,6 +24,8 @@ import java.util.Optional;
 @Service
 public class SummaryDataService {
     private final SummaryDataRepository summaryDataRepository;
+    private final SummaryDataMapper summaryDataMapper;
+    private final TopicRepository topicRepository;
 
     private static HashSet<SummaryRequestDTO> requestQueue = new HashSet<>();
 
@@ -30,9 +33,13 @@ public class SummaryDataService {
 
     public SummaryDataService(SummaryDataRepository summaryDataRepository, SummaryDataMapper summaryDataMapper, TopicRepository topicRepository) {
         this.summaryDataRepository = summaryDataRepository;
+        this.summaryDataMapper = summaryDataMapper;
+        this.topicRepository = topicRepository;
     }
 
-    public void save(SummaryDataEntity summaryDataEntity) {
+    public void save(String topicTitle, LocalDate initialDate, LocalDate finalDate, GeneratedSummary generatedSummary, SummaryRequestDTO requestDTO) {
+        SummaryDataEntity summaryDataEntity = summaryDataMapper.convertGeneratedSummaryToSummaryDataEntity(topicTitle, initialDate, finalDate, generatedSummary);
+        removeFromQueue(requestDTO);
         summaryDataRepository.save(summaryDataEntity);
     }
 
