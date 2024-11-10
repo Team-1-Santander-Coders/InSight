@@ -15,4 +15,6 @@ public interface SummaryRepository extends JpaRepository<SummaryEntity, Long> {
 
     Page<SummaryEntity> findByCategoriesContaining(String category, Pageable pageable);
     Page<SummaryEntity> findByTopicTitle(String topicTitle, Pageable pageable);
+
+    List<SummaryEntity> findByUserId(Long userId);
 }

@@ -13,4 +13,8 @@ public interface SummaryDataRepository extends JpaRepository<SummaryDataEntity, 
     List<SummaryDataEntity> findByFinalDate(LocalDate date);
 
     Page<SummaryDataEntity> findByFinalDate(LocalDate date, Pageable pageable);
+
+    List<SummaryDataEntity> findByUserId(String userId);
+    Page<SummaryDataEntity> findByUserId(String userId, Pageable pageable);
+
 }
