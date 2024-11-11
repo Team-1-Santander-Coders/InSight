@@ -96,7 +96,7 @@ public class SummaryDataService {
                         .subscribeOn(Schedulers.boundedElastic())
                         .subscribe(response -> userEntityList.remove(user),
                                 error -> logger.error("Erro ao tentar enviar mensagem para o usuário de ID {}: {}", user.getId(), error.getMessage())
-                ));
+                        ));
 
         usersToNotificate.remove(summaryRequestDTO);
     }
