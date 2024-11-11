@@ -8,6 +8,7 @@ import getterson.insight.services.TopicService;
 import getterson.insight.utils.exception.ThrowingFunctionWrapper;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -42,6 +43,7 @@ public class TopicMapper implements Mapper<TopicEntity, TopicDTO> {
     }
 
     private TopicDTO createDTO(TopicEntity topicEntity) {
+        if(topicEntity.getSummaries() == null) return new TopicDTO(topicEntity.getId(), topicEntity.getTitle(), new ArrayList<>());
         return new TopicDTO(topicEntity.getId(), topicEntity.getTitle(), summaryMapper.toDTO(topicEntity.getSummaries()));
     }
 
