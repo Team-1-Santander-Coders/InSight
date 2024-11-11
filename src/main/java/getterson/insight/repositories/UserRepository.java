@@ -22,6 +22,4 @@ public interface UserRepository extends JpaRepository<UserEntity, Long> {
             "JOIN s.topic t " +
             "WHERE t.user.id = :userId")
     Optional<List<SummarySimpleDataDTO>> findAllAsSimpleDTO (@Param("userId") Long userId);
-
-
 }
