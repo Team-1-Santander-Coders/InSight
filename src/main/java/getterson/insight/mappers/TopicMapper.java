@@ -28,6 +28,7 @@ public class TopicMapper implements Mapper<TopicEntity, TopicDTO> {
         return createDTO(topicEntity);
     }
 
+
     public List<TopicDTO> toDTO(List<TopicEntity> topicEntities){
         return topicEntities.stream()
                 .map(this::createDTO)
@@ -48,6 +49,7 @@ public class TopicMapper implements Mapper<TopicEntity, TopicDTO> {
         if(topicEntity.getSummaries() == null) return new TopicDTO(topicEntity.getId(), topicEntity.getTitle(), new ArrayList<>());
         return new TopicDTO(topicEntity.getId(), topicEntity.getTitle(), summaryDataMapper.toDTO(topicEntity.getSummaries()));
     }
+
 
     private TopicEntity getEntity(TopicDTO topicDTO) throws TopicNotFoundException {
         return topicService.findById(topicDTO.id());
