@@ -83,7 +83,11 @@ public class UserController {
 
         boolean isInUserTopicList = authenticatedUser.getTopicList()
                 .stream()
-                .anyMatch(topic -> topic.equals(summaryData.getTopic()));
+                .filter(topic -> topic.getSummaries()
+                                      .stream()
+                                      .anyMatch(summary -> summary.getId().equals(summaryData.getId())))
+                                      .findFirst()
+                                      .isPresent();
 
         if (isInUserTopicList) return ResponseEntity.ok(summaryDataMapper.toDTO(summaryData));
         else return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Resumo não pode ser acessado por este usuário.");
@@ -141,24 +145,34 @@ public class UserController {
     public ResponseEntity<?> setPreference(@PathVariable("preferenceType") PreferenceType preferenceType,
                                            @RequestParam(required = false, value = "topic_id") Long topicId,
                                            @RequestParam(required = false, value = "send_newsletter") boolean sendNewsletter,
-                                           @RequestParam(required = false, value = "send_when_ready") boolean sendNotificationWhenReady) {
+                                           @RequestParam(required = false, value = "send_when_ready") boolean sendNotificationWhenReady) throws Exception {
         UserEntity authenticatedUser = (UserEntity) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        if (preferenceType.equals(PreferenceType.USER)) {
-            UserPreferenceEntity userPreferenceEntity = new UserPreferenceEntity(authenticatedUser);
-            userPreferenceEntity.setSendNotificationWhenReady(sendNotificationWhenReady);
-            userPreferenceRepository.saveAndFlush(userPreferenceEntity);
 
-            return ResponseEntity.ok(userPreferenceEntity);
+        if (preferenceType.equals(PreferenceType.USER)) {
+            authenticatedUser.getUserPreference().setSendNotificationWhenReady(sendNotificationWhenReady);
+            return ResponseEntity.ok(userPreferenceMapper.toDTO(authenticatedUser.getUserPreference()));
         }
 
         if (preferenceType.equals(PreferenceType.TOPIC)) {
-            Optional<TopicEntity> topicEntity = topicRepository.findById(topicId);
-            if (topicEntity.isPresent()) {
-                TopicPreferenceEntity topicPreferenceEntity = new TopicPreferenceEntity(authenticatedUser, topicEntity.get());
+            Optional<TopicPreferenceEntity> topicPreferenceEntityOptional = authenticatedUser.getTopicPreferenceList()
+                                                                                     .stream()
+                                                                                     .filter(topic -> topic.getId() == topicId)
+                                                                                     .findFirst();
+            if (topicPreferenceEntityOptional.isPresent()) {
+                TopicPreferenceEntity topicPreferenceEntity = topicPreferenceEntityOptional.get();
                 topicPreferenceEntity.setSendNewsLetter(sendNewsletter);
-                topicPreferenceRepository.saveAndFlush(topicPreferenceEntity);
+                topicPreferenceService.updateTopicPreference(topicPreferenceMapper.toDTO(topicPreferenceEntity));
+                return ResponseEntity.ok(topicPreferenceMapper.toDTO(topicPreferenceEntity));
+            }
 
-                return ResponseEntity.ok(topicPreferenceEntity);
+            Optional<TopicEntity> topicEntityOptional = topicRepository.findById(topicId);
+            if(topicEntityOptional.isPresent()) {
+                TopicEntity topicEntity = topicEntityOptional.get();
+                TopicPreferenceEntity topicPreferenceEntity = topicPreferenceService.createTopicPreference(authenticatedUser, topicEntity);
+                topicPreferenceEntity.setSendNewsLetter(sendNewsletter);
+
+                topicPreferenceService.updateTopicPreference(topicPreferenceMapper.toDTO(topicPreferenceEntity));
+                return ResponseEntity.ok(topicPreferenceMapper.toDTO(topicPreferenceEntity));
             }
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Tópico não encontrado");
