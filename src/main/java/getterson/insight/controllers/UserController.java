@@ -12,6 +12,13 @@ import getterson.insight.repositories.*;
 import getterson.insight.services.*;
 import getterson.insight.utils.DateUtil;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +32,7 @@ import java.util.Optional;
 
 
 @RestController
+@Tag(name = "User Controller", description = "Gerenciamento de tópicos e preferências de usuário")
 public class UserController {
     private final TopicRepository topicRepository;
     private final TopicMapper topicMapper;
@@ -53,6 +61,16 @@ public class UserController {
         this.topicPreferenceMapper = topicPreferenceMapper;
     }
 
+    @Operation(
+            summary = "Listar tópicos e preferências do usuário",
+            description = "Retorna uma lista com os tópicos, preferências do usuário e as preferências associadas a tópicos específicos para o usuário autenticado."
+    )
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Lista de tópicos e preferências do usuário", content = @Content(mediaType = "application/json")),
+            @ApiResponse(responseCode = "403", description = "Acesso negado")
+    })
+
+
     @GetMapping("/user")
     public ResponseEntity<?> getUserTopicAndPreferenceList(){
         UserEntity authenticatedUser = (UserEntity) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -71,6 +89,8 @@ public class UserController {
 
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Lista de resumos não encontrada");
     }
+
+
 
     @GetMapping("/summary/{id}")
     public ResponseEntity<?> getSummary(@PathVariable("id") String id){
@@ -91,8 +111,16 @@ public class UserController {
         else return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Resumo não pode ser acessado por este usuário.");
     }
 
+
+    @Operation(summary = "Listar tópicos e preferências do usuário", description = "Retorna uma lista com os tópicos e preferências do usuário autenticado.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Lista de tópicos e preferências do usuário", content = @Content(mediaType = "application/json")),
+            @ApiResponse(responseCode = "403", description = "Acesso negado")
+    })
+
     @PostMapping("/topic")
-    public ResponseEntity<?> addTopicToUser(@RequestBody TopicRequestDTO topicRequestDTO) {
+    public ResponseEntity<?> addTopicToUser(@Parameter(description = "Dados do tópico a ser adicionado", required = true)
+                                                 @RequestBody TopicRequestDTO topicRequestDTO) {
         UserEntity authenticatedUser = (UserEntity) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         Optional<TopicEntity> topicEntityOptional = topicRepository.findByTitle(topicRequestDTO.title());
         TopicEntity topic;
@@ -117,6 +145,18 @@ public class UserController {
         return ResponseEntity.ok(topicMapper.toDTO(topic));
     }
 
+
+    @Operation(
+            summary = "Resumir um tópico",
+            description = "Gera um resumo para o tópico especificado de acordo com o período fornecido."
+    )
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Resumo gerado com sucesso"),
+            @ApiResponse(responseCode = "102", description = "Requisição já está sendo processada"),
+            @ApiResponse(responseCode = "400", description = "Período inválido"),
+            @ApiResponse(responseCode = "503", description = "Serviço temporariamente indisponível")
+    })
+
     @PostMapping("/summarize")
     public ResponseEntity<?> summarizeTopic(@RequestBody SummarizeRequestDTO summarizeRequestDTO) {
         UserEntity authenticatedUser = (UserEntity) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -139,11 +179,25 @@ public class UserController {
         }
     }
 
+    @Operation(
+            summary = "Definir preferência de usuário ou tópico",
+            description = "Define preferências para o usuário ou para um tópico específico. As preferências incluem o envio de newsletter e notificações."
+    )
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Preferência definida com sucesso"),
+            @ApiResponse(responseCode = "404", description = "Tópico não encontrado"),
+            @ApiResponse(responseCode = "400", description = "Parâmetros inválidos")
+    })
+
     @PostMapping("/preference/{preferenceType}")
-    public ResponseEntity<?> setPreference(@PathVariable("preferenceType") PreferenceType preferenceType,
-                                           @RequestParam(required = false, value = "topic_id") Long topicId,
-                                           @RequestParam(required = false, value = "send_newsletter") boolean sendNewsletter,
-                                           @RequestParam(required = false, value = "send_when_ready") boolean sendNotificationWhenReady) throws Exception {
+    public ResponseEntity<?> setPreference(@Parameter(description = "Tipo de preferência (USER ou TOPIC)", required = true)
+                                               @PathVariable("preferenceType") PreferenceType preferenceType,
+                                               @Parameter(description = "ID do tópico (necessário para tipo TOPIC)", required = false)
+                                               @RequestParam(value = "topic_id", required = false) Long topicId,
+                                               @Parameter(description = "Enviar newsletter", required = false)
+                                               @RequestParam(value = "send_newsletter", required = false) boolean sendNewsletter,
+                                               @Parameter(description = "Enviar notificação quando pronto", required = false)
+                                               @RequestParam(value = "send_when_ready", required = false) boolean sendNotificationWhenReady) throws Exception {
         UserEntity authenticatedUser = (UserEntity) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
         if (preferenceType.equals(PreferenceType.USER)) {
