@@ -20,7 +20,7 @@ public interface UserRepository extends JpaRepository<UserEntity, Long> {
     @Query("SELECT new getterson.insight.dtos.SummarySimpleDataDTO(s.id, s.finalDate, s.initialDate, s.description) " +
             "FROM SummaryDataEntity s " +
             "JOIN s.topic t " +
-            "WHERE t in (SELECT u.topicList FROM UserEntity u WHERE u.id = :userId)")
+            "WHERE t.user.id = :userId")
     Optional<List<SummarySimpleDataDTO>> findAllAsSimpleDTO (@Param("userId") Long userId);
 
 
