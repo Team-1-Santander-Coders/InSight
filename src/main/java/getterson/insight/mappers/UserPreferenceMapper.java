@@ -17,7 +17,7 @@ public class UserPreferenceMapper implements Mapper<UserPreferenceEntity, UserPr
     public UserPreferenceDTO toDTO(UserPreferenceEntity userPreferenceEntity){
         return new UserPreferenceDTO(userPreferenceEntity.getId(),
                                      userPreferenceEntity.getUser().getId(),
-                                     userPreferenceEntity.getBlackListWords(),
+                                     userPreferenceEntity.isSendNotificationWhenReady(),
                                      userPreferenceEntity.getType());
     }
 

@@ -45,7 +45,7 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody RegisterRequestDTO registerRequestDTO) {
         try {
-            UserEntity user = userService.registerUser(registerRequestDTO.name(), registerRequestDTO.username(), registerRequestDTO.document(), stringToDate(registerRequestDTO.birthDate(), DEFAULT_DATE_PATTERN), registerRequestDTO.email(), registerRequestDTO.password());
+            UserEntity user = userService.registerUser(registerRequestDTO.name(), registerRequestDTO.username(), registerRequestDTO.document(), stringToDate(registerRequestDTO.birthDate(), DEFAULT_DATE_PATTERN), registerRequestDTO.email(), registerRequestDTO.password(), registerRequestDTO.phone());
             return ResponseEntity.ok(new ResponseDTO(this.jwtService.generateToken(user), user.getUsername()));
         } catch (InvalidEmailException | InvalidDocumentException |
                  AuthenticationFailedException | InvalidPasswordException e) {

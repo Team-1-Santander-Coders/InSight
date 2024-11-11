@@ -13,6 +13,7 @@ import getterson.insight.repositories.SummaryDataRepository;
 import getterson.insight.repositories.TopicRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.scheduler.Schedulers;
@@ -20,29 +21,34 @@ import reactor.core.scheduler.Schedulers;
 import java.time.LocalDate;
 import java.util.*;
 
+import static getterson.insight.utils.DateUtil.ISO8601_DATE_PATTERN;
+import static getterson.insight.utils.DateUtil.stringToDate;
+
 @Service
 public class SummaryDataService {
     private final SummaryDataRepository summaryDataRepository;
     private final SummaryDataMapper summaryDataMapper;
     private final TopicRepository topicRepository;
     private final WebClient whatsappClient;
+    private final WebClient summarizeClient;
     private static final Logger logger = LoggerFactory.getLogger(SummaryDataService.class);
 
     private static final HashSet<SummaryRequestDTO> requestQueue = new HashSet<>();
 
     private static final HashMap<SummaryRequestDTO, List<UserEntity>> usersToNotificate = new HashMap<>();
 
-    public SummaryDataService(SummaryDataRepository summaryDataRepository, SummaryDataMapper summaryDataMapper, TopicRepository topicRepository, WebClient whatsappClient) {
+    public SummaryDataService(SummaryDataRepository summaryDataRepository, SummaryDataMapper summaryDataMapper, TopicRepository topicRepository, WebClient whatsappClient, WebClient summarizeClient) {
         this.summaryDataRepository = summaryDataRepository;
         this.summaryDataMapper = summaryDataMapper;
         this.topicRepository = topicRepository;
         this.whatsappClient = whatsappClient;
+        this.summarizeClient = summarizeClient;
     }
 
     public void save(String topicTitle, LocalDate initialDate, LocalDate finalDate, GeneratedSummary generatedSummary, SummaryRequestDTO requestDTO) {
         SummaryDataEntity summaryDataEntity = summaryDataMapper.convertGeneratedSummaryToSummaryDataEntity(topicTitle, initialDate, finalDate, generatedSummary);
         removeFromQueue(requestDTO);
-        if (usersToNotificate.containsKey(requestDTO)) sendNotificationsToUsers(requestDTO);
+        if (usersToNotificate.containsKey(requestDTO)) sendNotificationsToUsers(requestDTO, summaryDataEntity.getAudio());
 
         summaryDataRepository.save(summaryDataEntity);
     }
@@ -73,10 +79,10 @@ public class SummaryDataService {
         requestQueue.remove(summaryRequest);
     }
 
-    public void sendNotificationsToUsers(SummaryRequestDTO summaryRequestDTO) {
+    public void sendNotificationsToUsers(SummaryRequestDTO summaryRequestDTO, String audioUrl) {
         List<UserEntity> userEntityList = usersToNotificate.get(summaryRequestDTO);
 
-        String message = String.format("Olá, {NOME_USUARIO}!\nSeu InSight sobre o tópico \"%s\" já está pronto!", summaryRequestDTO.term());
+        String message = String.format("Olá, {NOME_USUARIO}!\n\nSeu InSight sobre o tópico \"%s\" já está pronto!\n\nConfira o podcast disponível sobre em: %s", summaryRequestDTO.term(), audioUrl);
 
         userEntityList.forEach(user ->
                 whatsappClient.post()
@@ -92,5 +98,30 @@ public class SummaryDataService {
         usersToNotificate.remove(summaryRequestDTO);
     }
 
+    @Scheduled(fixedDelay = 5000)
+    public void processQueue() {
+        if (!requestQueue.isEmpty()) {
+            for (SummaryRequestDTO requestDTO : new HashSet<>(requestQueue)) {
+                collectData(
+                        requestDTO.term(),
+                        requestDTO.start_date(),
+                        requestDTO.end_date()
+                );
+                removeFromQueue(requestDTO);
+            }
+        }
+    }
 
+    public void collectData(String topicTitle, String initialDate, String finalDate) {
+        SummaryRequestDTO summaryRequest = new SummaryRequestDTO(topicTitle, initialDate, finalDate);
+        summarizeClient.post()
+                .uri("/summarize")
+                .bodyValue(summaryRequest)
+                .retrieve()
+                .bodyToMono(GeneratedSummary.class)
+                .subscribeOn(Schedulers.boundedElastic())
+                .subscribe(
+                        summarizedData -> save(topicTitle, stringToDate(initialDate, ISO8601_DATE_PATTERN), stringToDate(finalDate, ISO8601_DATE_PATTERN), summarizedData, summaryRequest),
+                        error -> logger.error("Erro ao tentar obter o resumo para o tópico {}: {}", topicTitle, error.getMessage()));
+    }
 }

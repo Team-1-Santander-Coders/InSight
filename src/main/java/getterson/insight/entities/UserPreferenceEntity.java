@@ -30,7 +30,7 @@ public class UserPreferenceEntity {
     private PreferenceType type;
 
     public UserPreferenceEntity(UserEntity user) {
-        this.sendNotificationWhenReady = false;
+        this.sendNotificationWhenReady = true;
         this.user = user;
         this.type = PreferenceType.USER;
     }

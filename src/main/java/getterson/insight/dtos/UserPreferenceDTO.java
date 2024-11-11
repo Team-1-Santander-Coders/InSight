@@ -6,5 +6,5 @@ import java.util.List;
 
 public record UserPreferenceDTO(long id,
                                 long userId,
-                                List<String> blackListWords,
+                                boolean isSendNotificationWhenReady,
                                 PreferenceType type) {}

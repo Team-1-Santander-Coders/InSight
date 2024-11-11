@@ -38,11 +38,13 @@ public class UserService {
         return userRepository.saveAndFlush(userEntity);
     }
 
-    public UserEntity registerUser(String name, String username, String document, LocalDate birthDate, String email, String rawPassword) throws DuplicatedUserException, InvalidPasswordException, InvalidDocumentException, InvalidEmailException {
+    public UserEntity registerUser(String name, String username, String document, LocalDate birthDate, String email, String rawPassword, String phone) throws DuplicatedUserException, InvalidPasswordException, InvalidDocumentException, InvalidEmailException {
         Optional<String> documentOptional = DocumentUtil.validateAndClearDocument(document);
         if (documentOptional.isEmpty()) throw new InvalidDocumentException();
         String password = UserUtil.validatePassword(rawPassword);
         email = validateEmail(email);
+
+
 
         UserEntity userEntity = new UserEntity(name,
                 username,
@@ -50,11 +52,17 @@ public class UserService {
                 birthDate,
                 email,
                 BCrypt.hashpw(password, salt),
+                phone,
                 DocumentUtil.getTypeByDocument(document).get());
 
         Optional<String> isRegistered = isRegistered(userEntity);
         if (isRegistered.isPresent()) throw new DuplicatedUserException(isRegistered.get());
-        return save(userEntity);
+        userEntity = save(userEntity);
+        UserPreferenceEntity userPreferenceEntity = new UserPreferenceEntity(userEntity);
+        userEntity.setUserPreference(userPreferenceEntity);
+        userEntity = save(userEntity);
+
+        return userEntity;
     }
 
     private Optional<String> isRegistered(UserEntity userEntity){

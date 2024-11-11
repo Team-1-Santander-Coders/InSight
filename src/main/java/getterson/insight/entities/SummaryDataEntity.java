@@ -24,7 +24,7 @@ public class SummaryDataEntity {
     @Column(nullable = false)
     private String description;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 5000)
     private String summary;
 
     @Column(nullable = false)
@@ -33,9 +33,9 @@ public class SummaryDataEntity {
     @Column(nullable = false)
     private String audio;
 
-    @Column(nullable = false)
+    @Column(name = "reference_data", nullable = false, length = 5000)
     @ElementCollection
-    private List<String> references;
+    private List<String> referenceData;
 
     @ElementCollection
     private List<String> categories;

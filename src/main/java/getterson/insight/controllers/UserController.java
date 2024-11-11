@@ -3,7 +3,9 @@ package getterson.insight.controllers;
 import getterson.insight.dtos.*;
 import getterson.insight.entities.*;
 import getterson.insight.entities.types.PreferenceType;
+import getterson.insight.exceptions.InvalidPeriodException;
 import getterson.insight.mappers.SummaryDataMapper;
+import getterson.insight.mappers.TopicMapper;
 import getterson.insight.repositories.*;
 import getterson.insight.services.*;
 import getterson.insight.utils.DateUtil;
@@ -16,7 +18,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,22 +25,24 @@ import java.util.Optional;
 @RestController
 public class UserController {
     private final TopicRepository topicRepository;
-    private final CollectorService collectorService;
+    private final TopicMapper topicMapper;
     private final UserRepository userRepository;
     private final SummaryDataService summaryDataService;
     private final UserPreferenceRepository userPreferenceRepository;
     private final TopicPreferenceRepository topicPreferenceRepository;
+    private final TopicPreferenceService topicPreferenceService;
     private final UserService userService;
     private final SummaryDataMapper summaryDataMapper;
 
 
-    public UserController(TopicRepository topicRepository, CollectorService collectorService, UserRepository userRepository, SummaryDataService summaryDataService, UserPreferenceRepository userPreferenceRepository, TopicPreferenceRepository topicPreferenceRepository, UserService userService, SummaryDataMapper summaryDataMapper) {
+    public UserController(TopicRepository topicRepository, TopicMapper topicMapper,  UserRepository userRepository, SummaryDataService summaryDataService, UserPreferenceRepository userPreferenceRepository, TopicPreferenceRepository topicPreferenceRepository, TopicPreferenceService topicPreferenceService, UserService userService, SummaryDataMapper summaryDataMapper) {
         this.topicRepository = topicRepository;
-        this.collectorService = collectorService;
+        this.topicMapper = topicMapper;
         this.userRepository = userRepository;
         this.summaryDataService = summaryDataService;
         this.userPreferenceRepository = userPreferenceRepository;
         this.topicPreferenceRepository = topicPreferenceRepository;
+        this.topicPreferenceService = topicPreferenceService;
         this.userService = userService;
         this.summaryDataMapper = summaryDataMapper;
     }
@@ -81,41 +84,56 @@ public class UserController {
     @PostMapping("/topic")
     public ResponseEntity<?> addTopicToUser(@RequestBody TopicRequestDTO topicRequestDTO) {
         UserEntity authenticatedUser = (UserEntity) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        Optional<TopicEntity> topicEntity = topicRepository.findByTitle(topicRequestDTO.title());
+        Optional<TopicEntity> topicEntityOptional = topicRepository.findByTitle(topicRequestDTO.title());
+        TopicEntity topic;
 
-        if (topicEntity.isEmpty())
-            return ResponseEntity.ok(topicRepository.saveAndFlush(new TopicEntity(topicRequestDTO.title(), authenticatedUser)));
-        else {
-            userRepository.findByDocument(authenticatedUser.getDocument()).ifPresent(user -> {
-                user.addTopic(topicEntity.get());
-            });
-            return ResponseEntity.ok(topicEntity);
+        if (topicEntityOptional.isPresent()) {
+            topic = topicEntityOptional.get();
+            authenticatedUser.addTopic(topic);
         }
+        else {
+            topic = topicRepository.saveAndFlush(new TopicEntity(topicRequestDTO.title(), authenticatedUser));
+        }
+
+        SummaryRequestDTO summaryRequestDTO = createSummaryDataDTOByPeriod(topic, "day");
+
+        if (summaryRequestDTO != null) summaryDataService.addToQueue(summaryRequestDTO, authenticatedUser);
+
+        TopicPreferenceEntity topicPreference = topicPreferenceService.createTopicPreference(authenticatedUser, topic);
+
+        authenticatedUser.addTopicPreference(topicPreference);
+        userRepository.saveAndFlush(authenticatedUser);
+
+        return ResponseEntity.ok(topicMapper.toDTO(topic));
     }
 
     @PostMapping("/summarize")
-    public ResponseEntity<?> summarizeTopic(@RequestParam Long topicId, @RequestParam String period) {
+    public ResponseEntity<?> summarizeTopic(@RequestBody SummarizeRequestDTO summarizeRequestDTO) {
         UserEntity authenticatedUser = (UserEntity) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        Optional<TopicEntity> topicEntity = topicRepository.findById(topicId);
+        Optional<TopicEntity> topicEntity = topicRepository.findById(Long.parseLong(summarizeRequestDTO.topic_id()));
 
-        if (topicEntity.isPresent()) {
-            SummaryRequestDTO summaryRequestDTO = createSummaryDataDTOByPeriod(topicEntity.get(), period);
+        try {
+            if (topicEntity.isPresent()) {
+                SummaryRequestDTO summaryRequestDTO = createSummaryDataDTOByPeriod(topicEntity.get(), summarizeRequestDTO.period());
+                if (summaryRequestDTO == null) throw new InvalidPeriodException();
 
-            if (!summaryDataService.verifyOnQueue(summaryRequestDTO)) {
-                summaryDataService.addToQueue(summaryRequestDTO, authenticatedUser);
-
-                return ResponseEntity.status(HttpStatusCode.valueOf(200)).body("Solicitação bem-sucedida.");
+                if (!summaryDataService.verifyOnQueue(summaryRequestDTO)) {
+                    summaryDataService.addToQueue(summaryRequestDTO, authenticatedUser);
+                    return ResponseEntity.status(HttpStatusCode.valueOf(200)).body("Solicitação bem-sucedida.");
+                }
+                return ResponseEntity.status(HttpStatusCode.valueOf(102)).body("Esta requisição já está sendo processada pelo servidor e seu resultado estará disponível o mais rápido possível.");
             }
-            return ResponseEntity.status(HttpStatusCode.valueOf(102)).body("Esta requisição já está sendo processada pelo servidor e seu resultado estará disponível o mais rápido possível.");
+            return ResponseEntity.status(HttpStatusCode.valueOf(503)).body("Serviço temporariamente indisponível.");
+        } catch (InvalidPeriodException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
-        return ResponseEntity.status(HttpStatusCode.valueOf(503)).body("Serviço temporariamente indisponível.");
     }
 
     @PostMapping("/preference/{preferenceType}")
     public ResponseEntity<?> setPreference(@PathVariable("preferenceType") PreferenceType preferenceType,
-                                           @RequestParam(required = false) Long topicId,
-                                           @RequestParam(required = false) boolean sendNewsletter,
-                                           @RequestParam(required = false) boolean sendNotificationWhenReady) {
+                                           @RequestParam(required = false, value = "topic_id") Long topicId,
+                                           @RequestParam(required = false, value = "send_newsletter") boolean sendNewsletter,
+                                           @RequestParam(required = false, value = "send_when_ready") boolean sendNotificationWhenReady) {
         UserEntity authenticatedUser = (UserEntity) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         if (preferenceType.equals(PreferenceType.USER)) {
             UserPreferenceEntity userPreferenceEntity = new UserPreferenceEntity(authenticatedUser);
@@ -138,23 +156,24 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Tópico não encontrado");
     }
 
-    private static SummaryRequestDTO createSummaryDataDTOByPeriod (TopicEntity topicEntity, String period){
-        if (period == null | period.isBlank()) {
+    private static SummaryRequestDTO createSummaryDataDTOByPeriod(TopicEntity topicEntity, String period){
+
+        if (period.equalsIgnoreCase("week")) {
+            return new SummaryRequestDTO(topicEntity.getTitle(),
+                    DateUtil.dateToIsoString(LocalDate.now().minusDays(7)),
+                    DateUtil.dateToIsoString(LocalDate.now()));
+        }
+
+        if (period.equalsIgnoreCase("month")) {
+            return new SummaryRequestDTO(topicEntity.getTitle(),
+                    DateUtil.dateToIsoString(LocalDate.now().minusDays(30)),
+                    DateUtil.dateToIsoString(LocalDate.now()));
+        }
+
+        if (period.equalsIgnoreCase("day")) {
             return new SummaryRequestDTO(topicEntity.getTitle(),
                     DateUtil.dateToIsoString(LocalDate.now().minusDays(1)),
-                    DateUtil.dateToString(LocalDate.now()));
-        }
-
-        if (period.equals("week")) {
-            return new SummaryRequestDTO(topicEntity.getTitle(),
-                    DateUtil.dateToIsoString(LocalDate.now().minusDays(7)),
-                    DateUtil.dateToString(LocalDate.now()));
-        }
-
-        if (period.equals("month")) {
-            return new SummaryRequestDTO(topicEntity.getTitle(),
-                    DateUtil.dateToIsoString(LocalDate.now().minusDays(7)),
-                    DateUtil.dateToString(LocalDate.now()));
+                    DateUtil.dateToIsoString(LocalDate.now()));
         }
 
         return null;
