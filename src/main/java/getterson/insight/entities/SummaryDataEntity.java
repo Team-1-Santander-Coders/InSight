@@ -21,7 +21,7 @@ public class SummaryDataEntity {
     @Column(nullable = false)
     private LocalDate finalDate;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 1000)
     private String description;
 
     @Column(nullable = false, length = 5000)

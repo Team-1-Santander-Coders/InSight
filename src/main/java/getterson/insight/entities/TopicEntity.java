@@ -20,7 +20,7 @@ public class TopicEntity {
     private String title;
 
     @OneToMany(mappedBy = "topic", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<SummaryEntity> summaries;
+    private List<SummaryDataEntity> summaries;
 
     @ManyToOne
     private UserEntity user;

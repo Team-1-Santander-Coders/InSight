@@ -16,10 +16,12 @@ public class TopicMapper implements Mapper<TopicEntity, TopicDTO> {
 
     private final SummaryMapper summaryMapper;
     private final TopicService topicService;
+    private final SummaryDataMapper summaryDataMapper;
 
-    public TopicMapper(SummaryMapper summaryMapper, TopicService topicService) {
+    public TopicMapper(SummaryMapper summaryMapper, TopicService topicService, SummaryDataMapper summaryDataMapper) {
         this.topicService = topicService;
         this.summaryMapper = summaryMapper;
+        this.summaryDataMapper = summaryDataMapper;
     }
 
     public TopicDTO toDTO(TopicEntity topicEntity){
@@ -44,7 +46,7 @@ public class TopicMapper implements Mapper<TopicEntity, TopicDTO> {
 
     private TopicDTO createDTO(TopicEntity topicEntity) {
         if(topicEntity.getSummaries() == null) return new TopicDTO(topicEntity.getId(), topicEntity.getTitle(), new ArrayList<>());
-        return new TopicDTO(topicEntity.getId(), topicEntity.getTitle(), summaryMapper.toDTO(topicEntity.getSummaries()));
+        return new TopicDTO(topicEntity.getId(), topicEntity.getTitle(), summaryDataMapper.toDTO(topicEntity.getSummaries()));
     }
 
     private TopicEntity getEntity(TopicDTO topicDTO) throws TopicNotFoundException {
