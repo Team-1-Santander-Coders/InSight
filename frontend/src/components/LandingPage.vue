@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col w-full h-min">
         <div class="w-full">
-
+            
         </div>
         <Card class="w-full">
             <template #content>

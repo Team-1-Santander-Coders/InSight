@@ -13,57 +13,93 @@
         </div>
 
         <div v-if="selectedCategory === 'login'">
-            <div class="flex items-center gap-4 mb-4">
-                <label for="email" class="font-semibold w-24">Email</label>
-                <InputText id="email" v-model="email" class="flex-auto" type="email" placeholder="Digite seu email"
-                    required autocomplete="off" />
-            </div>
-            <div class="flex items-center gap-4 mb-8">
-                <label for="password" class="font-semibold w-24">Senha</label>
-                <InputText id="password" type="password" v-model="password" feedback="false" class="flex-auto"
-                    placeholder="Digite sua senha" required autocomplete="off" />
-            </div>
+            <form>
+                <div class="flex items-center gap-4 mb-4">
+                    <label for="email" class="font-semibold w-24">Email</label>
+                    <InputText id="email" v-model="email" class="flex-auto" type="email" placeholder="Digite seu email"
+                        required autocomplete="off" />
+                </div>
+                <div class="flex items-center gap-4 mb-8">
+                    <label for="password" class="font-semibold w-24">Senha</label>
+                    <InputText id="password" type="password" v-model="password" feedback="false" class="flex-auto"
+                        placeholder="Digite sua senha" required autocomplete="off" />
+                </div>
+                <div class="flex justify-end gap-2">
+                    <Button type="button" :label="buttonLabel" @click="submitForm" :loading="loading"></Button>
+                </div>
+            </form>
         </div>
+
 
         <div v-if="selectedCategory === 'register'">
-            <div class="flex items-center gap-4 mb-4">
-                <label for="userType" class="font-semibold w-24">Tipo do documento</label>
-                <div class="flex-auto">
-                    <div class="flex gap-2">
-                        <Dropdown id="userType" v-model="documentType" :options="documentTypes" optionLabel="name"
-                            optionValue="value" class="w-full" />
-                    </div>
-                </div>
-            </div>
-            <div class="flex items-center gap-4 mb-4">
-                <label for="document" class="font-semibold w-24">Documento</label>
-                <div class="flex-auto">
+            <form>
 
-                    <div class="flex gap-2">
-                        <InputMask id="document" v-model="document"
-                            :mask="documentType === 'cpf' ? '999.999.999-99' : '99.999.999/9999-99'"
-                            :placeholder="documentType === 'cpf' ? 'Digite seu CPF' : 'Digite seu CNPJ'"
-                            class="flex-auto" required autocomplete="off" />
+                <div class="flex items-center gap-4 mb-4">
+                    <label for="name" class="font-semibold w-24">Nome completo</label>
+                    <InputText id="name" v-model="name" class="flex-auto" type="text" placeholder="Digite seu nome"
+                        required autocomplete="off" />
+                </div>
+                <div class="flex items-center gap-4 mb-2">
+                    <label for="username" class="font-semibold w-24">Usuário</label>
+                    <InputText id="username" v-model="username" class="flex-auto" type="text"
+                        placeholder="Digite seu usuário" required autocomplete="off" />
+                </div>
+                <div class="flex items-center gap-4 mb-4">
+                    <label for="email" class="font-semibold w-24">Email</label>
+                    <InputText id="email" v-model="email" class="flex-auto" type="email" placeholder="Digite seu email"
+                        required autocomplete="off" />
+                </div>
+                <div class="flex items-center gap-4 mb-2">
+                    <label for="password" class="font-semibold w-24">Senha</label>
+                    <Password id="password" v-model="password" feedback="false" class="flex-auto"
+                        placeholder="Digite sua senha" required autocomplete="off" />
+                </div>
+                <div class="flex items-center gap-4 mb-4">
+                    <label for="userType" class="font-semibold w-24">Tipo do documento</label>
+                    <div class="flex-auto">
+                        <div class="flex gap-2">
+                            <Dropdown id="userType" v-model="documentType" :options="documentTypes" optionLabel="name"
+                                optionValue="value" class="w-full" />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="flex items-center gap-4 mb-4">
-                <label for="email" class="font-semibold w-24">Email</label>
-                <InputText id="email" v-model="email" class="flex-auto" type="email" placeholder="Digite seu email"
-                    required autocomplete="off" />
-            </div>
-            <div class="flex items-center gap-4 mb-2">
-                <label for="password" class="font-semibold w-24">Senha</label>
-                <Password id="password" v-model="password" feedback="false" class="flex-auto"
-                    placeholder="Digite sua senha" required autocomplete="off" />
-            </div>
+                <div class="flex items-center gap-4 mb-4">
+                    <label for="document" class="font-semibold w-24">Documento</label>
+                    <div class="flex-auto">
+                        <div class="flex gap-2">
+                            <InputMask id="document" v-model="document"
+                                :mask="documentType === 'cpf' ? '999.999.999-99' : '99.999.999/9999-99'"
+                                :placeholder="documentType === 'cpf' ? 'Digite seu CPF' : 'Digite seu CNPJ'"
+                                class="flex-auto" required autocomplete="off" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 mb-4">
+                    <label for="birthDate" class="font-semibold w-24">Data de nascimento</label>
+                    <div class="flex-auto">
+                        <div class="flex gap-2">
+                            <InputMask id="birthDate" v-model="birthDate" mask="99/99/9999"
+                                placeholder="Digite sua data de nascimento" class="flex-auto" required
+                                autocomplete="off" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 mb-4">
+                    <label for="phoneNumber" class="font-semibold w-24">Telefone celular</label>
+                    <div class="flex-auto">
+                        <div class="flex gap-2">
+                            <InputMask id="phoneNumber" v-model="phoneNumber" mask="(99) 99999-9999"
+                                placeholder="Digite seu número de celular" class="flex-auto" required
+                                autocomplete="off" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end gap-2">
+                    <Button type="button" :label="buttonLabel" @click="submitForm" :loading="loading"></Button>
+                </div>
+            </form>
         </div>
-
         <p class="text-center text-red-500 mb-3" v-if="errorMessage">{{ errorMessage }}</p>
-
-        <div class="flex justify-end gap-2">
-            <Button type="button" :label="buttonLabel" @click="submitForm" :loading="loading"></Button>
-        </div>
     </Dialog>
 </template>
 
@@ -80,9 +116,13 @@ import axios from '../plugins/axios';
 
 const userModalVisible = ref(false);
 const selectedCategory = ref('login');
+const name = ref('');
+const username = ref('');
+const birthDate = ref('');
 const email = ref('');
 const password = ref('');
 const document = ref('');
+const phoneNumber = ref('');
 const documentType = ref('cpf');
 const loading = ref(false);
 const errorMessage = ref('');

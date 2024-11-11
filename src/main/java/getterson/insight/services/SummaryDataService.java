@@ -50,7 +50,6 @@ public class SummaryDataService {
     public void save(String topicTitle, LocalDate initialDate, LocalDate finalDate, GeneratedSummary generatedSummary, SummaryRequestDTO requestDTO) {
         SummaryDataEntity summaryDataEntity = summaryDataMapper.convertGeneratedSummaryToSummaryDataEntity(topicTitle, initialDate, finalDate, generatedSummary);
 
-
         removeFromQueue(requestDTO);
         if (usersToNotificate.containsKey(requestDTO)) sendNotificationsToUsers(requestDTO, summaryDataEntity.getAudio());
 
@@ -111,7 +110,6 @@ public class SummaryDataService {
                         requestDTO.start_date(),
                         requestDTO.end_date()
                 );
-                removeFromQueue(requestDTO);
             }
         }
     }
