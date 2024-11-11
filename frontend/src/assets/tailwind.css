@@ -38,14 +38,14 @@
   font-family: "Anton", sans-serif;
   font-weight: 400;
   font-style: bold;
-  @apply text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-tight tracking-wide;
+  @apply text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl leading-tight tracking-wide;
 }
 
 .card-text {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: bold;
-  @apply text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-normal tracking-normal;
+  @apply text-xs sm:text-sm md:text-xs lg:text-base xl:text-base leading-normal tracking-normal;
 }
 
 .project-detail {

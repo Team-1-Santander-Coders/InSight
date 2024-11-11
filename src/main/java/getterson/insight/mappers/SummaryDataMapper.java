@@ -2,6 +2,7 @@ package getterson.insight.mappers;
 
 import getterson.insight.dtos.GeneratedSummary;
 import getterson.insight.dtos.SummaryDataDTO;
+import getterson.insight.dtos.SummarySimpleDataDTO;
 import getterson.insight.entities.SummaryDataEntity;
 import getterson.insight.entities.TopicEntity;
 import getterson.insight.repositories.SummaryDataRepository;
@@ -28,6 +29,19 @@ public class SummaryDataMapper implements Mapper<SummaryDataEntity, SummaryDataD
 
     public SummaryDataDTO toDTO(SummaryDataEntity summaryDataEntity){
         return createDTO(summaryDataEntity);
+    }
+
+    public SummarySimpleDataDTO toSimpleDTO(SummaryDataEntity summaryDataEntity){
+        return createSimpleDTO(summaryDataEntity);
+    }
+    public List<SummarySimpleDataDTO> toSimpleDTO(List<SummaryDataEntity> summaryDataEntities) {
+        return summaryDataEntities.stream()
+                .map(this::createSimpleDTO)
+                .toList();
+    }
+
+    private SummarySimpleDataDTO createSimpleDTO(SummaryDataEntity summaryDataEntity) {
+        return new SummarySimpleDataDTO(summaryDataEntity.getId(), summaryDataEntity.getInitialDate(), summaryDataEntity.getFinalDate(), summaryDataEntity.getDescription(), summaryDataEntity.getImage(), summaryDataEntity.getAudio());
     }
 
     public List<SummaryDataDTO> toDTO(List<SummaryDataEntity> summaryDataEntities) {
