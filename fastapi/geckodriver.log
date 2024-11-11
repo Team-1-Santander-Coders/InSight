@@ -18903,3 +18903,4 @@ console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebook
 console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/7613d2fe-bbe7-4c36-bd5f-92be9125227c" ({})
 console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/adaff679-139d-483b-a649-425129cd25c2" ({})
 console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/0935036c-ad2f-4fa2-94b3-410c6a333394" ({})
+1731299890248	geckodriver	INFO	Listening on 127.0.0.1:55178

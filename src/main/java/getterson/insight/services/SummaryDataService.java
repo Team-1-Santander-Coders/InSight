@@ -3,7 +3,7 @@ package getterson.insight.services;
 import getterson.insight.dtos.GeneratedSummary;
 import getterson.insight.dtos.MessageRequestDTO;
 import getterson.insight.dtos.SummaryRequestDTO;
-import getterson.insight.dtos.SummarySimpleDataDTO;
+
 import getterson.insight.entities.SummaryDataEntity;
 import getterson.insight.entities.TopicEntity;
 import getterson.insight.entities.UserEntity;
@@ -11,8 +11,10 @@ import getterson.insight.mappers.SummaryDataMapper;
 import getterson.insight.repositories.SummaryDataRepository;
 
 import getterson.insight.repositories.TopicRepository;
+import getterson.insight.utils.DateUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -37,7 +39,7 @@ public class SummaryDataService {
 
     private static final HashMap<SummaryRequestDTO, List<UserEntity>> usersToNotificate = new HashMap<>();
 
-    public SummaryDataService(SummaryDataRepository summaryDataRepository, SummaryDataMapper summaryDataMapper, TopicRepository topicRepository, WebClient whatsappClient, WebClient summarizeClient) {
+    public SummaryDataService(SummaryDataRepository summaryDataRepository, SummaryDataMapper summaryDataMapper, TopicRepository topicRepository, WebClient whatsappClient, WebClient summarizeClient, SummaryService summaryService) {
         this.summaryDataRepository = summaryDataRepository;
         this.summaryDataMapper = summaryDataMapper;
         this.topicRepository = topicRepository;
@@ -47,6 +49,8 @@ public class SummaryDataService {
 
     public void save(String topicTitle, LocalDate initialDate, LocalDate finalDate, GeneratedSummary generatedSummary, SummaryRequestDTO requestDTO) {
         SummaryDataEntity summaryDataEntity = summaryDataMapper.convertGeneratedSummaryToSummaryDataEntity(topicTitle, initialDate, finalDate, generatedSummary);
+
+
         removeFromQueue(requestDTO);
         if (usersToNotificate.containsKey(requestDTO)) sendNotificationsToUsers(requestDTO, summaryDataEntity.getAudio());
 
@@ -63,16 +67,16 @@ public class SummaryDataService {
 
     public void addToQueue(SummaryRequestDTO summaryRequest, UserEntity user) {
         Optional<TopicEntity> topicEntityOptional = topicRepository.findByTitle(summaryRequest.term());
-
-        if (user.getUserPreference().isSendNotificationWhenReady()) {
-            List<UserEntity> userList;
-            if (usersToNotificate.containsKey(summaryRequest)) userList = usersToNotificate.get(summaryRequest);
-            else userList = new ArrayList<>();
-            userList.add(user);
-            usersToNotificate.put(summaryRequest, userList);
+        if(!verifyIfSummmaryDataIsIncluded(summaryRequest.term(), DateUtil.stringToDate(summaryRequest.start_date(), ISO8601_DATE_PATTERN), DateUtil.stringToDate(summaryRequest.end_date(), ISO8601_DATE_PATTERN))) {
+            if (user.getUserPreference().isSendNotificationWhenReady()) {
+                List<UserEntity> userList;
+                if (usersToNotificate.containsKey(summaryRequest)) userList = usersToNotificate.get(summaryRequest);
+                else userList = new ArrayList<>();
+                userList.add(user);
+                usersToNotificate.put(summaryRequest, userList);
+            }
+            requestQueue.add(summaryRequest);
         }
-
-        requestQueue.add(summaryRequest);
     }
 
     public void removeFromQueue(SummaryRequestDTO summaryRequest){
@@ -112,7 +116,12 @@ public class SummaryDataService {
         }
     }
 
-    public void collectData(String topicTitle, String initialDate, String finalDate) {
+    private boolean verifyIfSummmaryDataIsIncluded(String topicTitle, LocalDate initialDate, LocalDate finalDate){
+        Optional<SummaryDataEntity> summaryDataEntityOptional = summaryDataRepository.findByTopicTitleAndInitialDateAndFinalDate(topicTitle, initialDate, finalDate);
+        return summaryDataEntityOptional.isPresent();
+    }
+
+    private void collectData(String topicTitle, String initialDate, String finalDate) {
         SummaryRequestDTO summaryRequest = new SummaryRequestDTO(topicTitle, initialDate, finalDate);
         summarizeClient.post()
                 .uri("/summarize")
