@@ -154,25 +154,17 @@ public class UserController {
         }
 
         if (preferenceType.equals(PreferenceType.TOPIC)) {
-            Optional<TopicPreferenceEntity> topicPreferenceEntityOptional = authenticatedUser.getTopicPreferenceList()
-                                                                                     .stream()
-                                                                                     .filter(topic -> topic.getId() == topicId)
-                                                                                     .findFirst();
-            if (topicPreferenceEntityOptional.isPresent()) {
-                TopicPreferenceEntity topicPreferenceEntity = topicPreferenceEntityOptional.get();
-                topicPreferenceEntity.setSendNewsLetter(sendNewsletter);
-                topicPreferenceService.updateTopicPreference(topicPreferenceMapper.toDTO(topicPreferenceEntity));
-                return ResponseEntity.ok(topicPreferenceMapper.toDTO(topicPreferenceEntity));
-            }
 
             Optional<TopicEntity> topicEntityOptional = topicRepository.findById(topicId);
             if(topicEntityOptional.isPresent()) {
                 TopicEntity topicEntity = topicEntityOptional.get();
-                TopicPreferenceEntity topicPreferenceEntity = topicPreferenceService.createTopicPreference(authenticatedUser, topicEntity);
-                topicPreferenceEntity.setSendNewsLetter(sendNewsletter);
-
-                topicPreferenceService.updateTopicPreference(topicPreferenceMapper.toDTO(topicPreferenceEntity));
-                return ResponseEntity.ok(topicPreferenceMapper.toDTO(topicPreferenceEntity));
+                Optional<TopicPreferenceEntity> topicPreferenceEntityOptional = topicPreferenceService.getTopicPreferenceByTopicAndUser(topicEntity, authenticatedUser);
+                if (topicPreferenceEntityOptional.isPresent()) {
+                    TopicPreferenceEntity topicPreferenceEntity = topicPreferenceEntityOptional.get();
+                    topicPreferenceEntity.setSendNewsLetter(sendNewsletter);
+                    topicPreferenceService.updateTopicPreference(topicPreferenceMapper.toDTO(topicPreferenceEntity));
+                    return ResponseEntity.ok(topicPreferenceMapper.toDTO(topicPreferenceEntity));
+                }
             }
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Tópico não encontrado");
