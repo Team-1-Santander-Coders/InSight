@@ -6,6 +6,8 @@ import getterson.insight.entities.types.PreferenceType;
 import getterson.insight.exceptions.InvalidPeriodException;
 import getterson.insight.mappers.SummaryDataMapper;
 import getterson.insight.mappers.TopicMapper;
+import getterson.insight.mappers.TopicPreferenceMapper;
+import getterson.insight.mappers.UserPreferenceMapper;
 import getterson.insight.repositories.*;
 import getterson.insight.services.*;
 import getterson.insight.utils.DateUtil;
@@ -33,9 +35,11 @@ public class UserController {
     private final TopicPreferenceService topicPreferenceService;
     private final UserService userService;
     private final SummaryDataMapper summaryDataMapper;
+    private final UserPreferenceMapper userPreferenceMapper;
+    private final TopicPreferenceMapper topicPreferenceMapper;
 
 
-    public UserController(TopicRepository topicRepository, TopicMapper topicMapper,  UserRepository userRepository, SummaryDataService summaryDataService, UserPreferenceRepository userPreferenceRepository, TopicPreferenceRepository topicPreferenceRepository, TopicPreferenceService topicPreferenceService, UserService userService, SummaryDataMapper summaryDataMapper) {
+    public UserController(TopicRepository topicRepository, TopicMapper topicMapper, UserRepository userRepository, SummaryDataService summaryDataService, UserPreferenceRepository userPreferenceRepository, TopicPreferenceRepository topicPreferenceRepository, TopicPreferenceService topicPreferenceService, UserService userService, SummaryDataMapper summaryDataMapper, UserPreferenceMapper userPreferenceMapper, TopicPreferenceMapper topicPreferenceMapper) {
         this.topicRepository = topicRepository;
         this.topicMapper = topicMapper;
         this.userRepository = userRepository;
@@ -45,13 +49,17 @@ public class UserController {
         this.topicPreferenceService = topicPreferenceService;
         this.userService = userService;
         this.summaryDataMapper = summaryDataMapper;
+        this.userPreferenceMapper = userPreferenceMapper;
+        this.topicPreferenceMapper = topicPreferenceMapper;
     }
 
     @GetMapping("/user")
     public ResponseEntity<?> getUserTopicAndPreferenceList(){
         UserEntity authenticatedUser = (UserEntity) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
-        return ResponseEntity.ok(List.of(authenticatedUser.getTopicList(), authenticatedUser.getUserPreference(), authenticatedUser.getTopicPreferenceList()));
+        return ResponseEntity.ok(List.of(topicMapper.toDTO(authenticatedUser.getTopicList()),
+                                         userPreferenceMapper.toDTO(authenticatedUser.getUserPreference()),
+                                         topicPreferenceMapper.toDTO(authenticatedUser.getTopicPreferenceList())));
     }
 
     @GetMapping("/summaries")
