@@ -155,6 +155,7 @@ const submitForm = async () => {
             });
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('user', login.value);
+            console.log(response.status)
         } else if (selectedCategory.value === 'register') {
             const response = await axios.post('/register', {
                 name: name.value,

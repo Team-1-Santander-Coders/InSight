@@ -83,11 +83,9 @@ public class UserController {
 
         boolean isInUserTopicList = authenticatedUser.getTopicList()
                 .stream()
-                .filter(topic -> topic.getSummaries()
+                .anyMatch(topic -> topic.getSummaries()
                                       .stream()
-                                      .anyMatch(summary -> summary.getId().equals(summaryData.getId())))
-                                      .findFirst()
-                                      .isPresent();
+                                      .anyMatch(summary -> summary.getId().equals(summaryData.getId())));
 
         if (isInUserTopicList) return ResponseEntity.ok(summaryDataMapper.toDTO(summaryData));
         else return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Resumo não pode ser acessado por este usuário.");

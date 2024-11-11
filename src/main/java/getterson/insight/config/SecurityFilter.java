@@ -57,7 +57,7 @@ public class SecurityFilter extends OncePerRequestFilter {
         String path = request.getServletPath();
 
         return path.startsWith("/login") ||
-                path.startsWith("/register/");
+                path.startsWith("/register");
     }
 
     private String recoverToken(HttpServletRequest request) {
