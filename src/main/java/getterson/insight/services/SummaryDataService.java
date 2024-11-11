@@ -35,7 +35,7 @@ public class SummaryDataService {
     private final WebClient summarizeClient;
     private static final Logger logger = LoggerFactory.getLogger(SummaryDataService.class);
 
-    private static final HashSet<SummaryRequestDTO> requestQueue = new HashSet<>();
+    private static final HashMap<SummaryRequestDTO, Boolean> requestQueue = new HashMap<>();
 
     private static final HashMap<SummaryRequestDTO, List<UserEntity>> usersToNotificate = new HashMap<>();
 
@@ -61,7 +61,7 @@ public class SummaryDataService {
     }
 
     public boolean verifyOnQueue(SummaryRequestDTO summaryRequestDTO){
-        return requestQueue.contains(summaryRequestDTO);
+        return requestQueue.containsKey(summaryRequestDTO);
     }
 
     public void addToQueue(SummaryRequestDTO summaryRequest, UserEntity user) {
@@ -74,7 +74,7 @@ public class SummaryDataService {
                 userList.add(user);
                 usersToNotificate.put(summaryRequest, userList);
             }
-            requestQueue.add(summaryRequest);
+            requestQueue.put(summaryRequest, false);
         }
     }
 
@@ -104,12 +104,15 @@ public class SummaryDataService {
     @Scheduled(fixedDelay = 5000)
     public void processQueue() {
         if (!requestQueue.isEmpty()) {
-            for (SummaryRequestDTO requestDTO : new HashSet<>(requestQueue)) {
-                collectData(
-                        requestDTO.term(),
-                        requestDTO.start_date(),
-                        requestDTO.end_date()
-                );
+            for (Map.Entry<SummaryRequestDTO, Boolean> entry : requestQueue.entrySet()) {
+                if (!entry.getValue()) {
+                    SummaryRequestDTO requestDTO = entry.getKey();
+                    collectData(
+                            requestDTO.term(),
+                            requestDTO.start_date(),
+                            requestDTO.end_date()
+                    );
+                }
             }
         }
     }
