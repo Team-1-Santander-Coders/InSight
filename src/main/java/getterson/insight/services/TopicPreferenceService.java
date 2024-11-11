@@ -43,4 +43,8 @@ public class TopicPreferenceService {
 
         return topicPreferenceMapper.toDTO(topicPreference);
     }
+
+    public Optional<TopicPreferenceEntity> getTopicPreferenceByTopicAndUser(TopicEntity topic, UserEntity user) {
+        return topicPreferenceRepository.findByTopicEntityAndUserEntity(topic, user);
+    }
 }
