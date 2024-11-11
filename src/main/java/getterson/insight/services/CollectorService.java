@@ -14,18 +14,18 @@ import static getterson.insight.utils.DateUtil.stringToDate;
 @Service
 public class CollectorService {
 
-    private final WebClient webClient;
+    private final WebClient summarizeClient;
     private final SummaryDataService summaryDataService;
     private static final Logger logger = LoggerFactory.getLogger(CollectorService.class);
 
-    public CollectorService(WebClient webClient, SummaryDataService summaryDataService) {
-        this.webClient = webClient;
+    public CollectorService(WebClient summarizeClient, SummaryDataService summaryDataService) {
+        this.summarizeClient = summarizeClient;
         this.summaryDataService = summaryDataService;
     }
 
     public void collectData(String topicTitle, String initialDate, String finalDate) {
         SummaryRequestDTO summaryRequest = new SummaryRequestDTO(topicTitle, initialDate, finalDate);
-        webClient.post()
+        summarizeClient.post()
                 .uri("/summarize")
                 .bodyValue(summaryRequest)
                 .retrieve()

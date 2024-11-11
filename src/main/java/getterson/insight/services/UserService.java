@@ -4,10 +4,7 @@ import getterson.insight.dtos.SummarySimpleDataDTO;
 import getterson.insight.entities.TopicPreferenceEntity;
 import getterson.insight.entities.UserEntity;
 import getterson.insight.entities.UserPreferenceEntity;
-import getterson.insight.exceptions.user.DuplicatedUserException;
-import getterson.insight.exceptions.user.InvalidPasswordException;
-import getterson.insight.exceptions.user.InvalidUserDataException;
-import getterson.insight.exceptions.user.UserNotFoundException;
+import getterson.insight.exceptions.user.*;
 import getterson.insight.repositories.UserRepository;
 import getterson.insight.utils.DocumentUtil;
 import getterson.insight.utils.UserUtil;
@@ -19,6 +16,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
+import static getterson.insight.utils.UserUtil.validateEmail;
 
 @Service
 public class UserService {
@@ -39,10 +38,11 @@ public class UserService {
         return userRepository.saveAndFlush(userEntity);
     }
 
-    public UserEntity registerUser(String name, String username, String document, LocalDate birthDate, String email, String rawPassword) throws DuplicatedUserException, InvalidPasswordException {
+    public UserEntity registerUser(String name, String username, String document, LocalDate birthDate, String email, String rawPassword) throws DuplicatedUserException, InvalidPasswordException, InvalidDocumentException, InvalidEmailException {
         Optional<String> documentOptional = DocumentUtil.validateAndClearDocument(document);
-        if (documentOptional.isEmpty()) throw new IllegalArgumentException("Documento não é valido.");
+        if (documentOptional.isEmpty()) throw new InvalidDocumentException();
         String password = UserUtil.validatePassword(rawPassword);
+        email = validateEmail(email);
 
         UserEntity userEntity = new UserEntity(name,
                 username,
@@ -74,10 +74,8 @@ public class UserService {
         return userRepository.findAllAsSimpleDTO(id);
     }
 
-    public Optional<UserEntity> validateUserLogin(String email, String rawPassword) throws InvalidUserDataException {
-        Optional<UserEntity> userEntityOptional = userRepository.findByEmailAndPassword(email, BCrypt.hashpw(rawPassword, salt));
-        if(userEntityOptional.isEmpty()) throw new InvalidUserDataException();
-        return userEntityOptional;
+    public Optional<UserEntity> validateUserLogin(String email, String rawPassword) {
+        return userRepository.findByEmailAndPassword(email, BCrypt.hashpw(rawPassword, salt));
     }
 
     public UserEntity getUserByEmail(String email) throws UserNotFoundException {
