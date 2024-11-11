@@ -19,8 +19,7 @@ public class UserPreferenceEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ElementCollection
-    private List<String> blackListWords;
+    private boolean sendNotificationWhenReady;
 
     @OneToOne
     @JoinColumn(name = "user_id")
@@ -31,7 +30,7 @@ public class UserPreferenceEntity {
     private PreferenceType type;
 
     public UserPreferenceEntity(UserEntity user) {
-        this.blackListWords = new ArrayList<String>();
+        this.sendNotificationWhenReady = true;
         this.user = user;
         this.type = PreferenceType.USER;
     }
@@ -48,9 +47,10 @@ public class UserPreferenceEntity {
         return Objects.hashCode(user);
     }
 
-    public UserPreferenceEntity(List<String> blackListWords, UserEntity user, PreferenceType type){
-        this.blackListWords = blackListWords;
+    public UserPreferenceEntity(boolean sendNotificationWhenReady, UserEntity user, PreferenceType type){
+        this.sendNotificationWhenReady = sendNotificationWhenReady;
         this.user = user;
         this.type = type;
     }
+
 }

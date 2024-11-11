@@ -2,6 +2,7 @@ package getterson.insight.utils;
 
 import getterson.insight.exceptions.user.InvalidEmailException;
 import getterson.insight.exceptions.user.InvalidPasswordException;
+import getterson.insight.exceptions.user.InvalidPhoneException;
 
 import java.util.regex.Pattern;
 
@@ -16,6 +17,11 @@ public class UserUtil {
             return false;
         }
         return EMAIL_PATTERN.matcher(email).matches();
+    }
+
+    public static String validatePhoneNumber(String phoneNumber) throws InvalidPhoneException {
+        if (isValidPhoneNumber(phoneNumber)) return cleanPhoneNumber(phoneNumber);
+        throw new InvalidPhoneException();
     }
 
     public static String validateEmail(String email) throws InvalidEmailException {
@@ -57,5 +63,22 @@ public class UserUtil {
     private static boolean isSpecialCharacter(char ch) {
         String specialChars = "!@#$%^&*()_+-=[]{}|;:,.<>?";
         return specialChars.indexOf(ch) != -1;
+    }
+
+
+    private static String cleanPhoneNumber(String phoneNumber) {
+        if (phoneNumber == null) {
+            return null;
+        }
+        return phoneNumber.replaceAll("[^\\d]", "");
+    }
+
+    private static boolean isValidPhoneNumber(String phoneNumber) {
+        if (phoneNumber == null) {
+            return false;
+        }
+        String cleanedPhoneNumber = cleanPhoneNumber(phoneNumber);
+
+        return cleanedPhoneNumber.matches("^\\d{11}$");
     }
 }

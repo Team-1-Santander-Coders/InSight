@@ -1,15 +1,13 @@
 package getterson.insight.services;
 
+import getterson.insight.dtos.SummarySimpleDataDTO;
 import getterson.insight.entities.TopicPreferenceEntity;
 import getterson.insight.entities.UserEntity;
 import getterson.insight.entities.UserPreferenceEntity;
-import getterson.insight.exceptions.user.DuplicatedUserException;
-import getterson.insight.exceptions.user.InvalidPasswordException;
-import getterson.insight.exceptions.user.InvalidUserDataException;
-import getterson.insight.exceptions.user.UserNotFoundException;
+import getterson.insight.exceptions.user.*;
 import getterson.insight.repositories.UserRepository;
 import getterson.insight.utils.DocumentUtil;
-import getterson.insight.utils.UserUtil;
+import static getterson.insight.utils.UserUtil.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
@@ -18,6 +16,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
+import static getterson.insight.utils.UserUtil.validateEmail;
 
 @Service
 public class UserService {
@@ -38,22 +38,29 @@ public class UserService {
         return userRepository.saveAndFlush(userEntity);
     }
 
-    public UserEntity registerUser(String name, String username, String document, LocalDate birthDate, String email, String rawPassword) throws DuplicatedUserException, InvalidPasswordException {
+    public UserEntity registerUser(String name, String username, String document, LocalDate birthDate, String email, String rawPassword, String phone) throws DuplicatedUserException, InvalidPasswordException, InvalidDocumentException, InvalidEmailException, InvalidPhoneException {
         Optional<String> documentOptional = DocumentUtil.validateAndClearDocument(document);
-        if (documentOptional.isEmpty()) throw new IllegalArgumentException("Documento não é valido.");
-        String password = UserUtil.validatePassword(rawPassword);
-
+        if (documentOptional.isEmpty()) throw new InvalidDocumentException();
+        String password = validatePassword(rawPassword);
+        email = validateEmail(email);
+        phone = validatePhoneNumber(phone);
         UserEntity userEntity = new UserEntity(name,
                 username,
                 documentOptional.get(),
                 birthDate,
                 email,
                 BCrypt.hashpw(password, salt),
+                phone,
                 DocumentUtil.getTypeByDocument(document).get());
 
         Optional<String> isRegistered = isRegistered(userEntity);
         if (isRegistered.isPresent()) throw new DuplicatedUserException(isRegistered.get());
-        return save(userEntity);
+        userEntity = save(userEntity);
+        UserPreferenceEntity userPreferenceEntity = new UserPreferenceEntity(userEntity);
+        userEntity.setUserPreference(userPreferenceEntity);
+        userEntity = save(userEntity);
+
+        return userEntity;
     }
 
     private Optional<String> isRegistered(UserEntity userEntity){
@@ -69,10 +76,13 @@ public class UserService {
         return Optional.empty();
     }
 
-    public Optional<UserEntity> validateUserLogin(String email, String rawPassword) throws InvalidUserDataException {
-        Optional<UserEntity> userEntityOptional = userRepository.findByEmailAndPassword(email, BCrypt.hashpw(rawPassword, salt));
-        if(userEntityOptional.isEmpty()) throw new InvalidUserDataException();
-        return userEntityOptional;
+    public Optional<List<SummarySimpleDataDTO>> findAllAsSimpleDTO(Long id){
+        return userRepository.findAllAsSimpleDTO(id);
+    }
+
+    public Optional<UserEntity> validateUserLogin(String login, String rawPassword) {
+        if (login.contains("@")) return userRepository.findByEmailAndPassword(login, BCrypt.hashpw(rawPassword, salt));
+        else return userRepository.findByUsernameAndPassword(login, BCrypt.hashpw(rawPassword, salt));
     }
 
     public UserEntity getUserByEmail(String email) throws UserNotFoundException {
