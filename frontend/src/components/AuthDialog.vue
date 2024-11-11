@@ -13,10 +13,10 @@
         </div>
 
         <div v-if="selectedCategory === 'login'">
-            <form>
+            <form v-on:submit="submitForm">
                 <div class="flex items-center gap-4 mb-4">
-                    <label for="email" class="font-semibold w-24">Email</label>
-                    <InputText id="email" v-model="email" class="flex-auto" type="email" placeholder="Digite seu email"
+                    <label for="login" class="font-semibold w-24">Usuário/Email</label>
+                    <InputText id="login" v-model="login" class="flex-auto" placeholder="Digite seu usuário/email"
                         required autocomplete="off" />
                 </div>
                 <div class="flex items-center gap-4 mb-8">
@@ -25,15 +25,13 @@
                         placeholder="Digite sua senha" required autocomplete="off" />
                 </div>
                 <div class="flex justify-end gap-2">
-                    <Button type="button" :label="buttonLabel" @click="submitForm" :loading="loading"></Button>
+                    <Button type="submit" :label="buttonLabel" :loading="loading" class="mx-auto"></Button>
                 </div>
             </form>
         </div>
 
-
         <div v-if="selectedCategory === 'register'">
-            <form>
-
+            <form v-on:submit="submitForm">
                 <div class="flex items-center gap-4 mb-4">
                     <label for="name" class="font-semibold w-24">Nome completo</label>
                     <InputText id="name" v-model="name" class="flex-auto" type="text" placeholder="Digite seu nome"
@@ -95,7 +93,7 @@
                     </div>
                 </div>
                 <div class="flex justify-end gap-2">
-                    <Button type="button" :label="buttonLabel" @click="submitForm" :loading="loading"></Button>
+                    <Button type="submit" :label="buttonLabel" :loading="loading" class="mx-auto"></Button>
                 </div>
             </form>
         </div>
@@ -119,6 +117,7 @@ const selectedCategory = ref('login');
 const name = ref('');
 const username = ref('');
 const birthDate = ref('');
+const login = ref('');
 const email = ref('');
 const password = ref('');
 const document = ref('');
@@ -148,24 +147,27 @@ const buttonLabel = computed(() => {
 const submitForm = async () => {
     loading.value = true;
     errorMessage.value = '';
-
     try {
         if (selectedCategory.value === 'login') {
             const response = await axios.post('/login', {
-                email: email.value,
+                login: login.value,
                 password: password.value
             });
             localStorage.setItem('token', response.data.token);
-            localStorage.setItem('user', email.value);
+            localStorage.setItem('user', login.value);
         } else if (selectedCategory.value === 'register') {
             const response = await axios.post('/register', {
+                name: name.value,
+                username: username.value,
                 document: document.value,
+                birthDate: birthDate.value,
                 documentType: documentType.value,
                 email: email.value,
-                password: password.value
+                password: password.value,
+                phone: phoneNumber.value,
             });
             localStorage.setItem('token', response.data.token);
-            localStorage.setItem('user', email.value);
+            localStorage.setItem('user', username.value);
         }
         userModalVisible.value = false;
         location.reload();

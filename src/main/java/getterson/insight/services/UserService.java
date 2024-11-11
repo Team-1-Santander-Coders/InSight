@@ -80,8 +80,9 @@ public class UserService {
         return userRepository.findAllAsSimpleDTO(id);
     }
 
-    public Optional<UserEntity> validateUserLogin(String email, String rawPassword) {
-        return userRepository.findByEmailAndPassword(email, BCrypt.hashpw(rawPassword, salt));
+    public Optional<UserEntity> validateUserLogin(String login, String rawPassword) {
+        if (login.contains("@")) return userRepository.findByEmailAndPassword(login, BCrypt.hashpw(rawPassword, salt));
+        else return userRepository.findByUsernameAndPassword(login, BCrypt.hashpw(rawPassword, salt));
     }
 
     public UserEntity getUserByEmail(String email) throws UserNotFoundException {

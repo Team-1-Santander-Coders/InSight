@@ -34,9 +34,11 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequestDTO loginRequestDTO) {
         try {
-            Optional<UserEntity> user = userService.validateUserLogin(loginRequestDTO.email(), loginRequestDTO.password());
+            Optional<UserEntity> user = userService.validateUserLogin(loginRequestDTO.login(), loginRequestDTO.password());
             if (user.isEmpty()) throw new AuthenticationFailedException("Usuário ou senha incorretos");
-            else return ResponseEntity.ok(new ResponseDTO(this.jwtService.generateToken(user.get()), user.get().getUsername()));
+            else {
+                return ResponseEntity.ok(new ResponseDTO(this.jwtService.generateToken(user.get()), user.get().getUsername()));
+            }
         } catch (AuthenticationFailedException e) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
         }

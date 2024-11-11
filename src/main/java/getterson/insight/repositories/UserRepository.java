@@ -15,6 +15,7 @@ public interface UserRepository extends JpaRepository<UserEntity, Long> {
     Optional<UserEntity> findByEmail(String email);
     Optional<UserEntity> findByUsername(String username);
     Optional<UserEntity> findByEmailAndPassword(String email, String password);
+    Optional<UserEntity> findByUsernameAndPassword(String username, String password);
 
     @Query("SELECT new getterson.insight.dtos.SummarySimpleDataDTO(s.id, s.finalDate, s.initialDate, s.description) " +
             "FROM SummaryDataEntity s " +

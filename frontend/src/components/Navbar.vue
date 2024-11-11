@@ -6,8 +6,8 @@
                     <Button label="Entrar/Registrar" class="p-button-text mr-2" @click="openModal()" />
                 </template>
                 <template v-else>
-                    <span class="mr-4 select-none">{{ username }}</span>
-                    <Button icon="pi pi-chart-bar" label="Acessar InSights" class="p-button-info mr-2"
+                    <span class="mr-4 select-none">Olá, <strong>{{ username }}</strong>!</span>
+                    <Button icon="pi pi-lightbulb" label="Acessar InSights" class="p-button-info mr-2"
                         @click="router.push('/user')" />
                     <Button icon="pi pi-sign-out" label="Logout" class="p-button-danger mr-2" @click="logout" />
                 </template>
