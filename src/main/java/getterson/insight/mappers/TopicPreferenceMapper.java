@@ -19,6 +19,8 @@ public class TopicPreferenceMapper implements Mapper<TopicPreferenceEntity, Topi
         this.topicPreferenceRepository = topicPreferenceRepository;
     }
 
+
+
     public TopicPreferenceDTO toDTO(TopicPreferenceEntity topicPreferenceEntity){
         return new TopicPreferenceDTO(topicPreferenceEntity.getId(), topicPreferenceEntity.getUser().getId(), topicPreferenceEntity.isSendNewsLetter(),topicPreferenceEntity.getType());
     }
