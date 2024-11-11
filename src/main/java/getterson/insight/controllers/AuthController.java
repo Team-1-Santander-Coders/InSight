@@ -48,7 +48,7 @@ public class AuthController {
             UserEntity user = userService.registerUser(registerRequestDTO.name(), registerRequestDTO.username(), registerRequestDTO.document(), stringToDate(registerRequestDTO.birthDate(), DEFAULT_DATE_PATTERN), registerRequestDTO.email(), registerRequestDTO.password(), registerRequestDTO.phone());
             return ResponseEntity.ok(new ResponseDTO(this.jwtService.generateToken(user), user.getUsername()));
         } catch (InvalidEmailException | InvalidDocumentException |
-                 AuthenticationFailedException | InvalidPasswordException e) {
+                 AuthenticationFailedException | InvalidPasswordException | InvalidPhoneException e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         } catch (DuplicatedUserException e) {
             return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());

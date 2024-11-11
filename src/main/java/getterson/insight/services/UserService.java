@@ -7,7 +7,7 @@ import getterson.insight.entities.UserPreferenceEntity;
 import getterson.insight.exceptions.user.*;
 import getterson.insight.repositories.UserRepository;
 import getterson.insight.utils.DocumentUtil;
-import getterson.insight.utils.UserUtil;
+import static getterson.insight.utils.UserUtil.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
@@ -38,14 +38,12 @@ public class UserService {
         return userRepository.saveAndFlush(userEntity);
     }
 
-    public UserEntity registerUser(String name, String username, String document, LocalDate birthDate, String email, String rawPassword, String phone) throws DuplicatedUserException, InvalidPasswordException, InvalidDocumentException, InvalidEmailException {
+    public UserEntity registerUser(String name, String username, String document, LocalDate birthDate, String email, String rawPassword, String phone) throws DuplicatedUserException, InvalidPasswordException, InvalidDocumentException, InvalidEmailException, InvalidPhoneException {
         Optional<String> documentOptional = DocumentUtil.validateAndClearDocument(document);
         if (documentOptional.isEmpty()) throw new InvalidDocumentException();
-        String password = UserUtil.validatePassword(rawPassword);
+        String password = validatePassword(rawPassword);
         email = validateEmail(email);
-
-
-
+        phone = validatePhoneNumber(phone);
         UserEntity userEntity = new UserEntity(name,
                 username,
                 documentOptional.get(),
