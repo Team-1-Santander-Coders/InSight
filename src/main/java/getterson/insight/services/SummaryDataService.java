@@ -75,6 +75,7 @@ public class SummaryDataService {
                 usersToNotificate.put(summaryRequest, userList);
             }
             requestQueue.put(summaryRequest, false);
+            logger.info(String.format("%s colocado na fila.", summaryRequest.term()));
         }
     }
 
@@ -107,11 +108,13 @@ public class SummaryDataService {
             for (Map.Entry<SummaryRequestDTO, Boolean> entry : requestQueue.entrySet()) {
                 if (!entry.getValue()) {
                     SummaryRequestDTO requestDTO = entry.getKey();
+
                     collectData(
                             requestDTO.term(),
                             requestDTO.start_date(),
                             requestDTO.end_date()
                     );
+                    requestQueue.put(requestDTO, true);
                 }
             }
         }
@@ -132,6 +135,9 @@ public class SummaryDataService {
                 .subscribeOn(Schedulers.boundedElastic())
                 .subscribe(
                         summarizedData -> save(topicTitle, stringToDate(initialDate, ISO8601_DATE_PATTERN), stringToDate(finalDate, ISO8601_DATE_PATTERN), summarizedData, summaryRequest),
-                        error -> logger.error("Erro ao tentar obter o resumo para o tópico {}: {}", topicTitle, error.getMessage()));
+                        error -> {
+                            logger.error("Erro ao tentar obter o resumo para o tópico {}: {}", topicTitle, error.getMessage());
+                            requestQueue.put(summaryRequest, false);
+                        });
     }
 }

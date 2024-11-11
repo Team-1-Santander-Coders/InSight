@@ -6,12 +6,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
-import { useRouter } from 'vue-router';
-import FloatLabel from 'primevue/floatlabel';
 import LandingPage from '../components/LandingPage.vue'
-import { useAuthStore } from '../stores/auth';
-
-const router = useRouter();
 
 const darkMode = ref(document.documentElement.classList.contains('dark'));
 

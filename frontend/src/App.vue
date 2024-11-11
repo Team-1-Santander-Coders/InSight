@@ -16,7 +16,7 @@
               <div class="w-[60%]">
                 <p class="mb-3 footer-title">LastBox Label</p>
                 <p class="footer-text mb-1"></p>
-                <p class="footer-text">I love using technology to create impactful solutions.
+                <p class="footer-text">Descubra novas perspectivas para transformar seus pensamentos.
                 </p>
               </div>
               <div>
@@ -39,7 +39,7 @@
             </div>
           </div>
           <Divider />
-          <p class="m-0 text-center text-xs select-none">&copy; 2024 Aleschopf. Todos os direitos reservados.</p>
+          <p class="m-0 text-center text-xs select-none">&copy; 2024 LastBox Label. Todos os direitos reservados.</p>
         </template>
       </Card>
     </footer>

@@ -1,0 +1,5 @@
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+POSTGRES_DB=
+SECRET_KEY="" escolha uma secret key para seus tokens JWT e armazene dentro das aspas para ser devidamente processado pelo Spring
+SALT="" gere um SALT e armazene dentro das aspas para ser devidamente processado pelo Spring

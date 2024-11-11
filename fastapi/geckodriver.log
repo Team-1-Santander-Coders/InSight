@@ -18904,3 +18904,684 @@ console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebook
 console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/adaff679-139d-483b-a649-425129cd25c2" ({})
 console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/0935036c-ad2f-4fa2-94b3-410c6a333394" ({})
 1731299890248	geckodriver	INFO	Listening on 127.0.0.1:55178
+1731345678408	geckodriver	INFO	Listening on 127.0.0.1:16297
+1731345681542	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "16298" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofilecIgYNS"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1731345682848	Marionette	INFO	Marionette enabled
+1731345683310	Marionette	INFO	Listening on port 16305
+WebDriver BiDi listening on ws://127.0.0.1:16298
+Read port: 16305
+1731345683713	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-fqWM7yfdqAEnmWt9-xMcUaf8gGEfQfOStAWEUQ0YdSB5onhEb1yUdoL87oS3EkhPbtC1PQGQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1307160341%3A1731345696374302&ddm=1 line 1176 > injectedScript line 2 > eval line 4843 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/challenge/pwd?TL=AKOx4s2s49myLY082PW2gWebY9sC3IfT_apMpr5tz5FTsPZ9rlxbe5OL6GGKi4pp&checkConnection=youtube%3A585&checkedDomains=youtube&cid=1&continue=https%3A%2F%2Fnotebooklm.google.com%2F&ddm=1&dsh=S-1307160341%3A1731345696374302&flowEntry=ServiceLogin&flowName=GlifWebSignIn&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-fqWM7yfdqAEnmWt9-xMcUaf8gGEfQfOStAWEUQ0YdSB5onhEb1yUdoL87oS3EkhPbtC1PQGQ&osid=1&pstMsg=1 line 1176 > injectedScript line 2 > eval line 4321 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+Exiting due to channel error.
+console.error: ({})1JavaScript error: https://g1.globo.com/df/distrito-federal/noticia/2024/11/10/enem-2024-694percent-dos-inscritos-fizeram-a-prova-neste-domingo-10-diz-inep.ghtml, line 6062: Error: Cannot resolve user
+JavaScript warning: https://www.googletagmanExiting due to channel error.
+Exiting due to channel error.
+by timeout at:
+h.Th@https://www.googletagmanager.com/gtag/js?id=G-SYGF1G18MM:553:30
+get@https://www.googletagmanager.com/gtag/js?id=G-SYGF1G18MM:551:119
+stop@https://www.googletagmanager.com/gtag/js?id=G-SYGF1G18MM:551:87
+h.rl/c/<@https://www.googletagmanager.com/gtag/js?id=G-SYGF1G18MM:551:410
+
+1731357215250	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CzsEz-sxQS7qhAv9NQPOmNeZirt1WOUML7zHj9nuePo.js line 2 > eval line 3787 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CzsEz-sxQS7qhAv9NQPOmNeZirt1WOUML7zHj9nuePo.js line 2 > eval line 846 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CzsEz-sxQS7qhAv9NQPOmNeZirt1WOUML7zHj9nconsole.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://x.com/i/flow/login" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://x.com/i/flow/login" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://x.com/i/flow/login" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://x.com/i/flow/login" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://x.com/i/flow/login" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://x.com/i/flow/login" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://x.com/i/flow/login" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://x.com/i/flow/login" ({})
+Exiting due to channel error.
+ZktjMk5PcmwxM3VyMTBNVkNvU3pUTVAtc1g0c2xxZVdVTENuS2p1aDZhYV9WUFRQWFYycXkwMTEyQWNIQVJpOVh5bWYwZmY1cXBPYnZFbEVuMURlOVNMampFRTl0cDFTcFY5WDNJV0lyZEd1dFZhdw?hl=pt-BR&gl=BR&ceid=BR%3Apt-419" ({})
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://news.google.com/read/CBMi-wFBVV95cUxQOGhNdXR3TGxWYXlhRnhUQVp6R21MM1Q4SXBIV3lpWTRjeEFYQnk3bkJPWjZHd3B2MGtGV0pwQUZHNkU2V0Y5M2ZCVnlwRGJMWHFETlpCUzdteTR0S3VQUGZPYTdxWnl0bmViQm02bmtkQ3JJd041cGhwb1V6RVlFOEE0aFcwZTRRMU02ZTlFM1JxZ1NSa3FJSFFLMEJTRnZwZkdHUjl0REtrdEdSRS14ZXhRVXcyZWFrLTliOUNiRmIxeHYzNjI3SlBydXVHZmNzMGNjSkdpQndMNDRna2RXYlI3QVppZE9KanlrTmxTR0ZvZkNoM3l4S3ZfTdIBigJBVV95cUxQWl9IT0YxYWFwVWE1YXJya1FJTnhfWXRDSUNuY3czY1ZLWk9odHNhNDJGWXlxRUt6NjdvOFJpZmtFdzRhWVhJeFF3UlFTWW9BTDRVMmxaRmUzVHZ5ekRJOXhKLUdfc0xTNERXb1ZjVEVya0c3ZW5XVTc3MWdzVHJkZktKeGlaU1FONV83OEI4THJVN2xsbTBLNDFQZktjMk5PcmwxM3VyMTBNVkNvU3pUTVAtc1g0c2xxZVdVTENuS2p1aDZhYV9WUFRQWFYycXkwMTEyQWNIQVJpOVh5bWYwZmY1cXBPYnZFbEVuMURlOVNMampFRTl0cDFTcFY5WDNJV0lyZEd1dFZhdw?hl=pt-BR&gl=BR&ceid=BR%3Apt-419" ({})
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/CzsEz-sxQS7qhAv9NQPOmNeZirt1WOUML7zHj9nuePo.js line 2 > eval line 1501 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://apps.sascdn.com/rtb/transparency/handler/st.min.html?%7b%22bid%22%3a%22179012c4-438d-40d2-8fa5-931c6ce39fa2%22%2c%22adomain%22%3a%22readproloop.com%22%2c%22page%22%3a%221306417%22%2c%22format%22%3a%2294851%22%2c%22crid%22%3a%22186811809%22%2c%22dsp%22%3a%22327%22%2c%22buyer%22%3a%2261888%22%2c%22cid%22%3a%22%22%2c%22adid%22%3a%22%22%2c%22hash%22%3a%22-5571016240549346371%22%7d, line 1: SecurityError: The operation is insecure.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/EFarS4v4fj_vWyoOZrE1QjO8GKu2OxW6GEepclgxiBE.js line 2 > eval line 7384 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://news.google.com/read/CBMi-wFBVV95cUxQOGhNdXR3TGxWYXlhRnhUQVp6R21MM1Q4SXBIV3lpWTRjeEFYQnk3bkJPWjZHd3B2MGtGV0pwQUZHNkU2V0Y5M2ZCVnlwRGJMWHFETlpCUzdteTR0S3VQUGZPYTdxWnl0bmViQm02bmtkQ3JJd041cGhwb1V6RVlFOEE0aFcwZTRRMU02ZTlFM1JxZ1NSa3FJSFFLMEJTRnZwZkdHUjl0REtrdEdSRS14ZXhRVXcyZWFrLTliOUNiRmIxeHYzNjI3SlBydXVHZmNzMGNjSkdpQndMNDRna2RXYlI3QVppZE9KanlrTmxTR0ZvZkNoM3l4S3ZfTdIBigJBVV95cUxQWl9IT0YxYWFwVWE1YXJya1FJTnhfWXRDSUNuY3czY1ZLWk9odHNhNDJGWXlxRUt6NjdvOFJpZmtFdzRhWVhJeFF3UlFTWW9BTDRVMmxaRmUzVHZ5ekRJOXhKLUdfc0xTNERXb1ZjVEVya0c3ZW5XVTc3MWdzVHJkZktKeGlaU1FONV83OEI4THJVN2xsbTBLNDFQZktjMk5PcmwxM3VyMTBNVkNvU3pUTVAtc1g0c2xxZVdVTENuS2p1aDZhYV9WUFRQWFYycXkwMTEyQWNIQVJpOVh5bWYwZmY1cXBPYnZFbEVuMURlOVNMampFRTl0cDFTcFY5WDNJV0lyZEd1dFZhdw?hl=pt-BR&gl=BR&ceid=BR%3Apt-419" ({})
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/EFarS4v4fj_vWyoOZrE1QjO8GKu2OxW6GEepclgxiBE.js line 2 > eval line 3497 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://g1.globo.com/df/distrito-federal/noticia/2024/11/10/enem-2024-694percent-dos-inscritos-fizeram-a-prova-neste-domingo-10-diz-inep.ghtml, line 6063: TypeError: Invalid attempt to destructure non-iterable instance.
+In order to be iterable, non-array objects must have a [Symbol.iterator]() method.
+JavaScript error: https://g1.globo.com/df/distrito-federal/noticia/2024/11/10/enem-2024-694percent-dos-inscritos-fizeram-a-prova-neste-domingo-10-diz-inep.ghtml, line 6058: TypeError: n is null
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://news.google.com/read/CBMi-wFBVV95cUxQOGhNdXR3TGxWYXlhRnhUQVp6R21MM1Q4SXBIV3lpWTRjeEFYQnk3bkJPWjZHd3B2MGtGV0pwQUZHNkU2V0Y5M2ZCVnlwRGJMWHFETlpCUzdteTR0S3VQUGZPYTdxWnl0bmViQm02bmtkQ3JJd041cGhwb1V6RVlFOEE0aFcwZTRRMU02ZTlFM1JxZ1NSa3FJSFFLMEJTRnZwZkdHUjl0REtrdEdSRS14ZXhRVXcyZWFrLTliOUNiRmIxeHYzNjI3SlBydXVHZmNzMGNjSkdpQndMNDRna2RXYlI3QVppZE9KanlrTmxTR0ZvZkNoM3l4S3ZfTdIBigJBVV95cUxQWl9IT0YxYWFwVWE1YXJya1FJTnhfWXRDSUNuY3czY1ZLWk9odHNhNDJGWXlxRUt6NjdvOFJpZmtFdzRhWVhJeFF3UlFTWW9BTDRVJavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: https://oglobo.globo.com/brasil/educacao/enem-e-vestibular/noticia/2024/11/11/gabarito-extraoficial-do-enem-2024-2o-dia-veja-as-respostas-da-prova-amarela.ghtml, line 6: SyntaxErroconsole.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://news.google.com/read/CBMi-wFBVV95cUxQOGhNdXR3TGxWYXlhRnhUQVp6R21MM1Q4SXBIV3lpWTRjeEFYQnk3bkJPWjZHd3B2MGtGV0pwQUZHNkU2V0Y5M2ZCVnlwRGJMWHFETlpCUzdteTR0S3VQUGZPYTdxWnl0bmViQm02bmtkQ3JJd041cGhwb1V6RVlFOEE0aFcwZTRRMU02ZTlFM1JxZ1NSa3FJSFFLMEJTRnZwZkdHUjl0REtrdEdSRS14ZXhRVXcyZWFrLTliOUNiRmIxeHYzNjI3SlBydXVHZmNzMGNjSkdpQndMNDRna2RXYlI3QVppZE9KanlrTmxTR0ZvZkNoM3l4S3ZfTdIBigJBVV95cUxQWl9IT0YxYWFwVWE1YXJya1FJTnhfWXRDSUNuY3czY1ZLWk9odHNhNDJGWXlxRUt6NjdvOFJpZmtFdzRhWVhJeFF3UlFTWW9BTDRVMmxaRmUzVHZ5ekRJOXhKLUdfc0xTNERXb1ZjVEVya0c3ZW5XVTc3MWdzVHJkZktKeGlaU1FONV83OEI4THJVN2xsbTBLNDFQZktjMk5PcmwxM3VyMTBNVkNvU3pUTVAtc1g0c2xxZVdVTENuS2p1aDZhYV9WUFRQWFYycXkwMTEyQWNIQVJpOVh5bWYwZmY1cXBPYnZFbEVuMURlOVNMampFRTl0cDFTcFY5WDNJV0lyZEd1dFZhdw?hl=pt-BR&gl=BR&ceid=BR%3Apt-419" ({})
+console.warn: Exiting due to channel error.
+Exiting due to channel error.
+.google.com/read/CBMi-wFBVV95cUxQOGhNdXR3TGxWYXlhRnhUQVp6R21MM1Q4SXBIV3lpWTRjeEFYQnk3bkJPWjZHd3B2MGtGV0pwQUZHNkU2V0Y5M2ZCVnlwRGJMWHFETlpCUzdteTR0S3VQUGZPYTdxWnl0bmViQm02bmtkQ3JJd041cGhwb1V6RVlFOEE0aFcwZTRRMU02ZTlFM1JxZ1NSa3FJSFFLMEJTRnZwZkdHUjl0REtrdEdSRS14ZXhRVXcyZWFrLTliOUNiRmIxeHYzNjI3SlBydXVHZmNzMGNjSkdpQndMNDRna2RXYlI3QVppZE9KanlrTmxTR0ZvZkNoM3l4S3ZfTdIBigExiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+dVTENuS2p1aDZhYV9WUFRQWFYycXkwMTEyQWNIQVJpOVh5bWYwZmY1cXBPYnZFbEVuMURlOVNMampFRTl0cDFTcFY5WDNJV0lyZEd1dFZhdw?hl=pt-BR&gl=BR&ceid=BR%3Apt-419" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://news.google.com/read/CBMi-wFBVV95cUxQOGhNdXR3TGxWYXlhRnhUQVp6R21MM1Q4SXBIV3lpWTRjeEFYQnk3bkJPWjZHd3B2MGtGV0pwQUZHNkU2V0Y5M2ZCVnlwRGJMWHFETlpCUzdteTR0S3VQUGZPYTdxWnl0bmViQm02bmtkQ3JJd041cGhwb1V6RVlFOEE0aFcwZTRRMU02ZTlFM1JxZ1NSa3FJSFFLMEJTRnZwZkdHUjl0REtrdEdSRS14ZXhRVXcyZWFrLTliOUNiRmIxeHYzNjI3SlBydXVHZmNzMGNjSkdpQndMNDRna2RXYlI3QVppZE9KanlrTmxTR0ZvZkNoM3l4S3ZfTdIBigJBVV95cUxQWl9IT0YxYWFwVWE1YXJya1FJTnhfWXRDSUNuY3czY1ZLWk9odHNhNDJGWXlxRUt6NjdvOFJpZmtFdzRhWVhJeFF3UlFTWW9BTDRVMmxaRmUzVHZ5ekRJOXhKLUdfc0xTNERXb1ZjVEVya0c3ZW5XVTc3MWdzVHJkZktKeGlaU1FONV83OEI4THJVN2xsbTBLNDFQZktjMk5Pconsole.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+Exiting due to channel error.
+con for " "https://news.google.com/read/CBMi-wFBVV95cUxQOGhNdXR3TGxWYXlhRnhUQVp6R21MM1Q4SXBIV3lpWTRjeEFYQnk3bkJPWjZHd3B2MGtGV0pwQUZHNkU2V0Y5M2ZCVnlwRGJMWHFETlpCUzdteTR0S3VQUGZPYTdxWnl0bmViQm02bmtkQ3JJd041cGhwb1V6RVlFOEE0aFcwZTRRMU02ZTlFM1JxZ1NSa3FJSFFLMEJTRnZwZkdHUjl0REtrdEdSRS14ZXhRVXcyZWFrLTliOUNiRmIxeHYzNjI3SlBydXVHZmNzMGNjSkdpQndMNDRna2RXYlI3QVppZE9KanlrTmxTR0ZvZkNoM3l4S3ZfTdIBigJBVV95cUxQWl9IT0YxYWFwVWE1YXJya1FJTnhfWXRDSUNuY3czY1ZLWk9odHNhNDJGWXlxRUt6NjdvOFJpZmtFdzRhWVhJeFF3UlFTWW9BTDRVMmxaRmUzVHZ5ekRJOXhKLUdfc0xTNERXb1ZjVEVya0c3ZW5XVTc3MWdzVHJkZktKeGlaU1FONV83OEI4THJVN2xsbTBLNDFQZktjMk5PcmwxM3VyMTBNVkNvU3pUTVAtc1g0c2xxZVdVTENuS2p1aDZhYV9WUFRQWFYycXkwMTEyQWNIQVJpOVh5bWYwZmY1cXBPYnZFbEVuMURlOVNMampFRTl0cDFTcFY5WDNJV0lyZEd1dFZhdw?hl=pt-BR&gl=BR&ceid=BR%3Apt-419" ({})
+Exiting due to channel error.
+m/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript, line 5246: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript, line 5246: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript, line 5246: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript, line 5246: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript, line 5246: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript, line 5246: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript, line 5246: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval, line 5246: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval, line 5246: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval, line 5246: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval line 5246 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval, line 5246: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval, line 5246: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval, line 5246: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval, line 5246: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval line 5246 > eval line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval line 5246 > eval line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval line 5246 > eval line 1 > eval line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval line 5246 > eval line 1 > eval line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript, line 5861: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript, line 5861: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript, line 5861: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript, line 5861: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript, line 5861: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript, line 5861: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript, line 5861: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript, line 5861: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval, line 5861: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval, line 5861: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval, line 5861: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval line 5861 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval, line 5861: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval, line 5861: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval, line 5861: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval, line 5861: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval line 5861 > eval line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval line 5861 > eval line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval line 5861 > eval line 1 > eval line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval line 5861 > eval line 1 > eval line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-c2RojSqPqAoYrgvI5_oTkiAEj8vkVMJJVa8WPqcTDD1fWgjBjaSa-kUwsBaEiVlQ4K0IhExQ&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1323453378%3A1731357457590632&ddm=1 line 1176 > injectedScript line 2 > eval line 5246 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+Exiting due to channel error.
+Exiting due to channel error.
+31357623155	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "47980" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofile59PGy0"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1731357624021	Marionette	INFO	Marionette enabled
+1731357624369	Marionette	INFO	Listening on port 47989
+WebDriver BiDi listening on ws://127.0.0.1:47980
+Read port: 47989
+1731357624711	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-fHJXMqZMpzfJOsi7Wqw0smuaf93QVxzuRm50eUvxsr2ygjCXuZnvDq03EHoKbHhJCbPz1e&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1526205751%3A1731357637020415&ddm=1 line 1176 > injectedScript line 2 > eval line 2835 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-fHJXMqZMpzfJOsi7Wqw0smuaf93QVxzuRm50eUvxsr2ygjCXuZnvDq03EHoKbHhJCbPz1e&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1526205751%3A1731357637020415&ddm=1 line 1176 > injectedScript line 2 > eval line 1368 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+1731358488177	geckodriver	INFO	Listening on 127.0.0.1:28414
+1731358491267	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "28415" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofilet6GmAU"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1731358491912	Marionette	INFO	Marionette enabled
+1731358492283	Marionette	INFO	Listening on port 28422
+WebDriver BiDi listening on ws://127.0.0.1:28415
+Read port: 28422
+1731358492634	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-fKibxhJvO_bAUPrsYaQAfpOtMmdj0k_FOlpr2TYJxSLOaj8sALPyE7yl8wekNkdeqM54IItg&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1053666908%3A1731358505543886&ddm=1 line 1176 > injectedScript line 2 > eval line 3261 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-fKibxhJvO_bAUPrsYaQAfpOtMmdj0k_FOlpr2TYJxSLOaj8sALPyE7yl8wekNkdeqM54IItg&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1053666908%3A1731358505543886&ddm=1 line 1176 > injectedScript line 2 > eval line 7421 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/20d392b5-34bf-4b8f-a16e-d27dee0f93b5" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/20d392b5-34bf-4b8f-a16e-d27dee0f93b5" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/20d392b5-34bf-4b8f-a16e-d27dee0f93b5" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/20d392b5-34bf-4b8f-a16e-d27dee0f93b5" ({})
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+letagmanager.com/gtag/js?id=G-SYGF1G18MM:550:87
+h.rl/c/<@https://www.googletagmanager.com/gtag/js?id=G-SYGF1G18MM:550:410
+
+JavaScript error: resource://gre/actors/ContentM1731358693987	Marionette	INFO	Stopped listening on port 22018
+JavaScript warning: , line 0: Script terminated by timeout at:
+
+Dynamically enable window occlusion 1
+m/v1/AUTH_e1b09a2d222b4900a437a46914be81e5/api/stable/web/api.min.js?loading-agent=global-webdeps, line 1: Error: Player API loaded twice! Aborting.
+1731358690691	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://cdn.insurads.com/bootstrap/S8QNIFPC.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://oglobo.globo.com/brasil/educacao/enem-e-vestibular/noticia/2024/11/10/estudantes-reclamam-da-dificuldade-de-provas-do-segundo-dia-de-enem-cada-vez-mais-dificil.ghtml, line 6: SyntaxError: missing variable name
+1731358703406	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: https://oglobo.globo.com/brasil/educacao/enem-e-vestibular/noticia/2024/11/10/estudantes-reclamam-da-dificuldade-de-provas-do-segundo-dia-de-enem-cada-vez-mais-dificil.ghtml, line 6: SyntaxError: missing variable name
+JavaScript error: https://cdn.cxense.com/sp1.html#ver=2.8.83&typ=pgv&rnd=m3di9l89678c4zeh&sid=1152151660084636047&loc=https%3A%2F%2Foglobo.globo.com%2Fbrasil%2Feducacao%2Fenem-e-vestibular%2Fnoticia%2F2024%2F11%2F10%2Festudantes-reclamam-da-dificuldade-de-provas-do-segundo-dia-de-enem-cada-vez-mais-dificil.ghtml&new=1&arf=0&ltm=1731358703608&ref=https%3A%2F%2Fnews.google.com%2F&tzo=180&wsz=1366x683&res=1366x768&dpr=1&col=24&bln=pt-BR&chs=UTF-8&cks=m3di9pnvd689gz4w&ckp=m3di9l891getyoak&glb=&amo=1731277907&cp_userState=anon, line 1: TypeError: cX.loadScript is not a function
+JavaScript warning: https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/0bf2c7e86b1c9e6395ef8dc061b578ba.js, line 13: Script terminated by timeout at:
+o@https://s3.glbimg.com/v1/AUTH_b002e0039b9f46a5a4a94ff667d31e2d/assets/dist/0bf2c7e86b1c9e6395ef8dc061b578ba.js:13:153466
+
+JavaScript warning: https://ads.pubmatic.com/AdServer/js/user_sync.html?p=157743&gdpr=0&gdpr_consent=&us_privacy=&predirect=https%3A%2F%2Fs.seedtag.com%2Fcs%2Fcookiesync%2Fpubmatic%3Fchanneluid%3D, line 1: Script terminated by timeout at:
+F@https://ads.pubmatic.com/AdServer/js/user_sync.html?p=157743&gdpr=0&gdpr_consent=&us_privacy=&predirect=https%3A%2F%2Fs.seedtag.com%2Fcs%2Fcookiesync%2Fpubmatic%3Fchanneluid%3D:1:9576
+q@https://ads.pubmatic.com/AdServer/js/user_sync.html?p=157743&gdpr=0&gdpr_consent=&us_privacy=&predirect=https%3A%2F%2Fs.seedtag.com%2Fcs%2Fcookiesync%2Fpubmatic%3Fchanneluid%3D:1:9748
+J@https://ads.pubmatic.com/AdServer/js/user_sync.html?p=157743&gdpr=0&gdpr_consent=&us_privacy=&predirect=https%3A%2F%2Fs.seedtag.com%2Fcs%2Fcookiesync%2Fpubmatic%3Fchanneluid%3D:1:14129
+x@https://ads.pubmatic.com/AdServer/js/user_sync.html?p=157743&gdpr=0&gdpr_consent=&us_privacy=&predirect=https%3A%2F%2Fs.seedtag.com%2Fcs%2Fcookiesync%2Fpubmatic%3Fchanneluid%3D:1:10976
+
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1731358755510	Marionette	INFO	Stopped listening on port 22027
+Dynamically enable window occlusion 1
+1731358866921	geckodriver	INFO	Listening on 127.0.0.1:57628
+1731358869944	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "57629" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofileAEPaSY"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1731358870350	Marionette	INFO	Marionette enabled
+1731358870677	Marionette	INFO	Listening on port 57637
+WebDriver BiDi listening on ws://127.0.0.1:57629
+Read port: 57637
+1731358870955	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-cdqvYrCJwYbxBjWbpCL65jRagzavAp_eiyHliilemSqzZ5FQUNaGu3MBJGGuEtpUXMh2cF1A&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-770415030%3A1731358882663996&ddm=1 line 1176 > injectedScript line 2 > eval line 4397 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+Exiting due to channel error.
+Exiting due to channel error.
+31359090173	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "24850" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofiledhKXSe"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1731359090765	Marionette	INFO	Marionette enabled
+1731359091017	Marionette	INFO	Listening on port 24859
+WebDriver BiDi listening on ws://127.0.0.1:24850
+Read port: 24859
+1731359091265	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-fKmu_aUvN9AKwnqXFVyR5SbNJJ1VuCDksbY2LzIjxihGmsjwSB6eaEvC8TeHvC-zdHe0ydiw&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1122310951%3A1731359103771725&ddm=1 line 1176 > injectedScript line 2 > eval line 4962 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/challenge/pwd?TL=AKOx4s2luRgJl4sGux1PG6Ep9gzLcAtM2o4trEPeig4bT0Krjr2I6ViV-hjt0fhP&checkConnection=youtube%3A192&checkedDomains=youtube&cid=1&continue=https%3A%2F%2Fnotebooklm.google.com%2F&ddm=1&dsh=S-1122310951%3A1731359103771725&flowEntry=ServiceLogin&flowName=GlifWebSignIn&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-fKmu_aUvN9AKwnqXFVyR5SbNJJ1VuCDksbY2LzIjxihGmsjwSB6eaEvC8TeHvC-zdHe0ydiw&osid=1&pstMsg=1 line 1176 > injectedScript line 2 > eval line 3653 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+Exiting due to channel error.
+1731359623461	geckodriver	INFO	Listening on 127.0.0.1:42648
+1731359626514	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "42649" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofiletAlo6M"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1731359627251	Marionette	INFO	Marionette enabled
+1731359627628	Marionette	INFO	Listening on port 42656
+WebDriver BiDi listening on ws://127.0.0.1:42649
+Read port: 42656
+1731359627768	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-dfd6GNBSItasX7f99gIIVBHNVA8Yq5NOE2XCQXFEC3_YOI9e5aD1hBa-MtRoR7K1BIJcI21A&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1308529800%3A1731359640829797&ddm=1 line 1176 > injectedScript line 2 > eval line 809 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-dfd6GNBSItasX7f99gIIVBHNVA8Yq5NOE2XCQXFEC3_YOI9e5aD1hBa-MtRoR7K1BIJcI21A&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1308529800%3A1731359640829797&ddm=1 line 1176 > injectedScript line 2 > eval line 1981 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135cconsole.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGconsole.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/b5159e2b-59f4-44b2-8b33-c9d5f2a7f23b" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/b5159e2b-59f4-44b2-8b33-c9d5f2a7f23b" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/b5159e2b-59f4-44b2-8b33-c9d5f2a7f23b" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/b5159e2b-59f4-44b2-8b33-c9d5f2a7f23b" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+AQRW/jymSMUnVTPEubjJo2mQmZCb2+WhAEwYXL/3nvwVKMZ1IkhZLaLZIAJszPzdWUyjCIoApMAguOZfDz67W1kcaMNkeyk2zhV+Y78a9+rSsUTObQEsqnH8mnFnDlQhSFO/P8Ji65d6fD7rzvjq7b+LF3D3aeXG8=:6:1107
+
+JavaScript warning: https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js, line 2: Script terminated by timeout at:
+fe@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:209714
+ou@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:275030
+Zs@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:296275
+Os@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:296158
+Cs@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:296027
+Es@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:295888
+vs@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:292875
+64448/Ko/<@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:242696
+60053/t.unstable_runWithPriority@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:383025
+Go@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:242473
+Ko@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:242643
+$o@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:242576
+ds@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:290260
+enqueueSetState@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:246550
+72408/v.prototype.setState@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:374564
+57555/t/ai</<@https://platform.twitter.com/embed/embed.ondemand.Tweet.2675382e57204df182a3.js:1:74499
+
+1731368552686	Marionette	INFO	Stopped listening on port 53717
+JavaScript warning: https://news.google.com/read/CBMiwwFBVV95cUxPYnNoYzdaVHVtVkhodXpJb2g3TUhwTVF6eDZvd014MlRIU3d2QWp3dVBCVFVRZ200S3JybXY0R1VtdExPQjJvMTBmVFh1ME1CUXdJeFF0bDZZX0dRdk82TVhrbVpwQXJJeU5sdGhtM0dvbnNxWDFtNjQ3TFlLSmt2Y0Vtd3NnYTJkd0FjVzFxdWVjM3RjLXQ2NkYtRm9kbnZlSnQ1ZEVCem1jam1HWDlMak4yTER5QzVQU1FRQWtOa1JjUWs?hl=pt-BR&gl=BR&ceid=BR%3Apt-419, line 288: Script terminated by timeout at:
+f@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:288:778
+f@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:288:849
+f@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:288:849
+f@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:288:849
+f@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:288:849
+gga@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:288:864
+jga@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:290:370
+_.tm@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:289:320
+_.Re/<@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:289:199
+_.pe@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:286:802
+_.Re@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:289:174
+_.Ue@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:100:333
+Coa/<@https://www.gstatic.com/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/ck=boq-dots.DotsSplashUi_desktop_ms.Ae0s9PivcFE.L.F4.O/am=GAREYDBgFhhAAQ/d=1/exm=_b,_tp/excm=_b,_tp,article/ed=1/wt=2/ujg=1/rs=ALs0n2M7kfUUDUhvFkP0CsydzezFLA3oQA/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;G3BKud:E8sThf;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;KFjtub:zthM6;LBgRLc:SdcwHb;Me32dd:MEeYgc;NPKaK:SdcwHb;NSEoX:eYnyH;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;ZwIgGc:lwOjSb;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;nAFL3:s39S4;oGtAuc:sOXFj;pXdRYb:MdUzUe;qafBPd:yDVVkb;qddgKe:xQtZb;up4Zyb:qY1Xef;wR5FRb:O1Gjze;xqZiqf:BBI74;yxTchf:KUM7Z;zxnPse:duFQFc/m=aLI87:6:631
+_.lb@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:49:295
+Coa@https://www.gstatic.com/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/ck=boq-dots.DotsSplashUi_desktop_ms.Ae0s9PivcFE.L.F4.O/am=GAREYDBgFhhAAQ/d=1/exm=_b,_tp/excm=_b,_tp,article/ed=1/wt=2/ujg=1/rs=ALs0n2M7kfUUDUhvFkP0CsydzezFLA3oQA/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;G3BKud:E8sThf;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;KFjtub:zthM6;LBgRLc:SdcwHb;Me32dd:MEeYgc;NPKaK:SdcwHb;NSEoX:eYnyH;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;ZwIgGc:lwOjSb;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;nAFL3:s39S4;oGtAuc:sOXFj;pXdRYb:MdUzUe;qafBPd:yDVVkb;qddgKe:xQtZb;up4Zyb:qY1Xef;wR5FRb:O1Gjze;xqZiqf:BBI74;yxTchf:KUM7Z;zxnPse:duFQFc/m=aLI87:6:605
+service@https://www.gstatic.com/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/ck=boq-dots.DotsSplashUi_desktop_ms.Ae0s9PivcFE.L.F4.O/am=GAREYDBgFhhAAQ/d=1/exm=_b,_tp/excm=_b,_tp,article/ed=1/wt=2/ujg=1/rs=ALs0n2M7kfUUDUhvFkP0CsydzezFLA3oQA/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;G3BKud:E8sThf;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;KFjtub:zthM6;LBgRLc:SdcwHb;Me32dd:MEeYgc;NPKaK:SdcwHb;NSEoX:eYnyH;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;ZwIgGc:lwOjSb;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;nAFL3:s39S4;oGtAuc:sOXFj;pXdRYb:MdUzUe;qafBPd:yDVVkb;qddgKe:xQtZb;up4Zyb:qY1Xef;wR5FRb:O1Gjze;xqZiqf:BBI74;yxTchf:KUM7Z;zxnPse:duFQFc/m=aLI87:6:682
+hca@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:111:193
+gca@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:110:164
+Mf@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:109:352
+_.Of@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:112:293
+_.Pf@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:112:334
+yI.prototype.init/<@https://www.gstatic.com/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/ck=boq-dots.DotsSplashUi_desktop_ms.Ae0s9PivcFE.L.F4.O/am=GAREYDBgFhhAAQ/d=1/exm=FCpbqb,LEikZe,P6sQOc,PrPYRd,QIhFr,RVV52b,WhJNk,Wt6vjf,_b,_tp,aLI87,hc6Ubd,hhhU8,pcQmje,pw70Gc,s39S4/excm=_b,_tp,article/ed=1/wt=2/ujg=1/rs=ALs0n2M7kfUUDUhvFkP0CsydzezFLA3oQA/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;G3BKud:E8sThf;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;KFjtub:zthM6;LBgRLc:SdcwHb;Me32dd:MEeYgc;NPKaK:SdcwHb;NSEoX:eYnyH;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;ZwIgGc:lwOjSb;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;nAFL3:s39S4;oGtAuc:sOXFj;pXdRYb:MdUzUe;qafBPd:yDVVkb;qddgKe:xQtZb;up4Zyb:qY1Xef;wR5FRb:O1Gjze;xqZiqf:BBI74;yxTchf:KUM7Z;zxnPse:duFQFc/m=p3hmRc,LvGhrf,RqjULd:41:402
+bi@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:152:267
+_.Qda/this.next@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:153:96
+Rda/<@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:153:493
+Rda@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:153:386
+_.G@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:154:24
+yI.prototype.init@https://www.gstatic.com/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/ck=boq-dots.DotsSplashUi_desktop_ms.Ae0s9PivcFE.L.F4.O/am=GAREYDBgFhhAAQ/d=1/exm=FCpbqb,LEikZe,P6sQOc,PrPYRd,QIhFr,RVV52b,WhJNk,Wt6vjf,_b,_tp,aLI87,hc6Ubd,hhhU8,pcQmje,pw70Gc,s39S4/excm=_b,_tp,article/ed=1/wt=2/ujg=1/rs=ALs0n2M7kfUUDUhvFkP0CsydzezFLA3oQA/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;G3BKud:E8sThf;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;KFjtub:zthM6;LBgRLc:SdcwHb;Me32dd:MEeYgc;NPKaK:SdcwHb;NSEoX:eYnyH;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;ZwIgGc:lwOjSb;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;nAFL3:s39S4;oGtAuc:sOXFj;pXdRYb:MdUzUe;qafBPd:yDVVkb;qddgKe:xQtZb;up4Zyb:qY1Xef;wR5FRb:O1Gjze;xqZiqf:BBI74;yxTchf:KUM7Z;zxnPse:duFQFc/m=p3hmRc,LvGhrf,RqjULd:41:306
+_.aua/<@https://www.gstatic.com/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/ck=boq-dots.DotsSplashUi_desktop_ms.Ae0s9PivcFE.L.F4.O/am=GAREYDBgFhhAAQ/d=1/exm=LEikZe,P6sQOc,PrPYRd,QIhFr,RVV52b,_b,_tp,aLI87,hc6Ubd,pcQmje,pw70Gc,s39S4/excm=_b,_tp,article/ed=1/wt=2/ujg=1/rs=ALs0n2M7kfUUDUhvFkP0CsydzezFLA3oQA/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;G3BKud:E8sThf;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;KFjtub:zthM6;LBgRLc:SdcwHb;Me32dd:MEeYgc;NPKaK:SdcwHb;NSEoX:eYnyH;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;ZwIgGc:lwOjSb;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;nAFL3:s39S4;oGtAuc:sOXFj;pXdRYb:MdUzUe;qafBPd:yDVVkb;qddgKe:xQtZb;up4Zyb:qY1Xef;wR5FRb:O1Gjze;xqZiqf:BBI74;yxTchf:KUM7Z;zxnPse:duFQFc/m=Wt6vjf,hhhU8,FCpbqb,WhJNk:13:205
+Bh/<@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:188:100
+wea/e.child</e.o<@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:212:457
+Dea@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:215:459
+zea@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:215:336
+_.Zi.prototype.ta@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:215:208
+oaa@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:49:52
+Bh/<@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:188:100
+
+Dynamically enable window occlusion 1
