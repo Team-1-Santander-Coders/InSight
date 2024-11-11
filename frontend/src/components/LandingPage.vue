@@ -3,17 +3,17 @@
         <div class="flex flex-col w-full items-center justify-center">
             <div class="landing-card w-full flex flex-row items-center justify-center">
                 <div class="w-[48%] flex items-center justify-center flex-col">
-                    <span class="card-title mb-4">
+                    <span class="card-title mb-4 select-none">
                         InSight
                     </span>
-                    <span class="card-text">
+                    <span class="card-text select-none">
                         Descubra novas perspectivas para transformar seus pensamentos.
                     </span>
                 </div>
                 <div class="landing-card-text w-[48%] flex items-center justify-center">
                     <div class="w-full flex flex-row items-center justify-evenly mb-12 mt-12">
                         <div class="w-[40%] text-center items-center justify-center">
-                            <span class="card-text">
+                            <span class="card-text select-none">
                                 No <strong>InSight</strong>, acreditamos que o excesso de informação pode atrapalhar
                                 quem quer se manter
                                 bem-informado. Nossa plataforma foi feita para <strong>simplificar essa
@@ -30,7 +30,7 @@
                             </span>
                         </div>
                         <div class="w-[40%] text-center items-center justify-center">
-                            <span class="card-text">
+                            <span class="card-text select-none">
                                 Com o <strong>InSight</strong>, manter-se atualizado nunca foi tão simples. Oferecemos
                                 resumos completos
                                 e a opção de <strong>áudio estilo podcast</strong> para quem prefere praticidade.

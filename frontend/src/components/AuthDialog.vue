@@ -1,7 +1,6 @@
 <template>
     <Dialog v-model:visible="userModalVisible" modal :header="dialogHeader" :style="{ width: '25rem' }">
         <span class="text-surface-500 dark:text-surface-400 block mb-8">Digite seus dados</span>
-
         <div class="flex justify-evenly">
             <div v-for="category in categories" :key="category.key" class="flex flex-col justify-center gap-4 mb-8">
                 <div>

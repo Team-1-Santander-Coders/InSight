@@ -61,7 +61,6 @@ async def get_summary(term: str, data: CollectedData, driver: Firefox) -> Summar
     create_new_notebook_button.click()
 
     texto_concatenado = tratar_collected(data)
-    print(len(texto_concatenado))
     caminho_abs_file = os.path.abspath("./temp/temporary_file.txt")
     try:
         botao_upload = WebDriverWait(driver, 10).until(
@@ -77,9 +76,10 @@ async def get_summary(term: str, data: CollectedData, driver: Firefox) -> Summar
         except:
             botao_upload = WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located(
-                    By.CSS_SELECTOR, '#mat-mdc-dialog-5 > div > div > upload-dialog > div > div.content > upload-main-screen > div.dropzone.ng-star-inserted > button'
+                    (By.CSS_SELECTOR, '#mat-mdc-dialog-5 > div > div > upload-dialog > div > div.content > upload-main-screen > div.dropzone.ng-star-inserted > button')
                 )
             )
+    
     botao_upload.click()
 
     enviar_arquivo_input = WebDriverWait(driver, 10).until(
