@@ -2,10 +2,14 @@
 1731107824848	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "14963" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofileyxRUAd"*** You are running in headless mode.
 console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-DDynamically enable window occlusion 01731107825696	Marionette	INFO	Marionette enabled
-11731107826026	Marionette	INFO	Listening on port 14978WebDriver BiDi listening on ws://127.0.0.1:14962
+DDynamically enable window occlusion 0
+1731107825696	Marionette	INFO	Marionette enabled
+11731107826026	Marionette	INFO	Listening on port 14978
+WebDriver BiDi listening on ws://127.0.0.1:14962
 Read port: 14979
-11731107826499	RemoteAgent	WARN	TLS certificate errors will be ignored for this session[[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dtconsole.error: ({})
+11731107826499	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
 DevTools listening on ws://127.0.0.1:14962/devtools/browser/53b23fd6-df9b-46ab-a48a-de6d496e8c91
 11731107836904	Marionette	INFO	Stopped listening on port 14978
 Dynamically enable window occlusion 1
@@ -30,7 +34,9 @@ Dynamically enable window occlusion 0
 1731108202981	Marionette	INFO	Marionette enabled
 1731108203345	Marionette	INFO	Listening on port 15324
 WebDriver BiDi listening on ws://127.0.0.1:15309
-RRead port: 1532311731108203839	RemoteAgent	WARN	TLS certificate errors will be ignored for this session[[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dtconsole.error: ({})
+RRead port: 1532311731108203839	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
 DevTools listening on ws://127.0.0.1:15309/devtools/browser/d1a52adb-60fb-468b-8a6d-3282c6779113
 1JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-SYGF1G18MM, line 337: Script terminated by timeout at:
 en.prototype.flush/<@https://www.googletagmanager.com/gtag/js?id=G-SYGF1G18MM:337:329
@@ -140,13 +146,16 @@ DevTools listening on ws://127.0.0.1:58289/devtools/browser/8d35f39a-ca29-4081-9
 1731108544357	Marionette	INFO	Stopped listening on port 58296
 Dynamically enable window occlusion 1
 1731109037296	geckodriver	INFO	Listening on 127.0.0.1:59500
-1731109040362	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "59501" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofilecW3s4u"**** You are running in headless mode.console.warn: services.settings: Ignoring preference override of remote settings server
+1731109040362	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "59501" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofilecW3s4u"**** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
 Dynamically enable window occlusion 0
 1731109041619	Marionette	INFO	Marionette enabled
 1731109042163	Marionette	INFO	Listening on port 59519
 Read port: 59519
-WebDriver BiDi listening on ws://1Read port: 5951811731109042857	RemoteAgent	WARN	TLS certificate errors will be ignored for this session[[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dtconsole.error: ({})
+WebDriver BiDi listening on ws://1Read port: 5951811731109042857	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
 DevTools listening on ws://127.0.0.1:59502/devtools/browser/8daace5a-46d7-4d43-a6d6-ab840a95a9a9
 1JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-SYGF1G18MM, line 335: Script terminated by timeout at:
 en.prototype.push@https://www.googletagmanager.com/gtag/js?id=G-SYGF1G18MM:335:267
@@ -266,9 +275,14 @@ Dynamically enable window occlusion 1
 1731109363365	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "60013" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofilePRKVOm"*** You are running in headless mode.
 console.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
-DDynamically enable window occlusion 011731109363872	Marionette	INFO	Marionette enabled11731109364318	Marionette	INFO	Listening on port 60027
-WebDriver BiDi listening on ws://127.0.0.1:60013Read port: 60026
-11731109364692	RemoteAgent	WARN	TLS certificate errors will be ignored for this session[[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dtconsole.error: ({})
+DDynamically enable window occlusion 0
+11731109363872	Marionette	INFO	Marionette enabled
+11731109364318	Marionette	INFO	Listening on port 60027
+WebDriver BiDi listening on ws://127.0.0.1:60013
+Read port: 60026
+11731109364692	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
 DevTools listening on ws://127.0.0.1:60012/devtools/browser/c027fe70-bfac-4dd8-a108-3e96534acd95
 1JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-SYGF1G18MM, line 551: Script terminated by timeout at:
 h.Th@https://www.googletagmanager.com/gtag/js?id=G-SYGF1G18MM:551:30
@@ -18636,7 +18650,8 @@ _.Jo.prototype.nb@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.
 
 Dynamically enable window occlusion 1
 1731291090894	geckodriver	INFO	Listening on 127.0.0.1:43108
-1731291093941	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "43109" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofilejbOrt5"**** You are running in headless mode.cconsole.warn: services.settings: Ignoring preference override of remote settings server
+1731291093941	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "43109" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofilejbOrt5"**** You are running in headless mode.
+cconsole.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
 Dynamically enable window occlusion 0
 1731291094912	Marionette	INFO	Marionette enabled
@@ -18644,7 +18659,8 @@ Dynamically enable window occlusion 0
 WebDriver BiDi listening on ws://127.0.0.1:43109
 Read port: 43138
 1731291095366	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dtcconsole.error: ({})
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+cconsole.error: ({})
 1731291097372	Marionette	INFO	Stopped listening on port 43138
 Dynamically enable window occlusion 1
 console.error: (new NetworkError("Network error: TypeError: NetworkError: Network request failed", "resource://services-settings/RemoteSettingsconsole.warn: LoginRecipes: "Falling back to a synchronous message for: https://x.com."
@@ -19027,7 +19043,8 @@ console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebook
 console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
 console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
 Exiting due to channel error.
-console.error: ({})1JavaScript error: https://g1.globo.com/df/distrito-federal/noticia/2024/11/10/enem-2024-694percent-dos-inscritos-fizeram-a-prova-neste-domingo-10-diz-inep.ghtml, line 6062: Error: Cannot resolve user
+console.error: ({})
+1JavaScript error: https://g1.globo.com/df/distrito-federal/noticia/2024/11/10/enem-2024-694percent-dos-inscritos-fizeram-a-prova-neste-domingo-10-diz-inep.ghtml, line 6062: Error: Cannot resolve user
 JavaScript warning: https://www.googletagmanExiting due to channel error.
 Exiting due to channel error.
 by timeout at:
@@ -19525,29 +19542,24 @@ console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebook
 console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
 console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
 console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
-AQRW/jymSMUnVTPEubjJo2mQmZCb2+WhAEwYXL/3nvwVKMZ1IkhZLaLZIAJszPzdWUyjCIoApMAguOZfDz67W1kcaMNkeyk2zhV+Y78a9+rSsUTObQEsqnH8mnFnDlQhSFO/P8Ji65d6fD7rzvjq7b+LF3D3aeXG8=:6:1107
-
-JavaScript warning: https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js, line 2: Script terminated by timeout at:
-fe@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:209714
-ou@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:275030
-Zs@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:296275
-Os@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:296158
-Cs@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:296027
-Es@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:295888
-vs@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:292875
-64448/Ko/<@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:242696
-60053/t.unstable_runWithPriority@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:383025
-Go@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:242473
-Ko@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:242643
-$o@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:242576
-ds@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:290260
-enqueueSetState@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:246550
-72408/v.prototype.setState@https://platform.twitter.com/embed/embed.9449.78398904051446294e3d.js:2:374564
-57555/t/ai</<@https://platform.twitter.com/embed/embed.ondemand.Tweet.2675382e57204df182a3.js:1:74499
-
-1731368552686	Marionette	INFO	Stopped listening on port 53717
-JavaScript warning: https://news.google.com/read/CBMiwwFBVV95cUxPYnNoYzdaVHVtVkhodXpJb2g3TUhwTVF6eDZvd014MlRIU3d2QWp3dVBCVFVRZ200S3JybXY0R1VtdExPQjJvMTBmVFh1ME1CUXdJeFF0bDZZX0dRdk82TVhrbVpwQXJJeU5sdGhtM0dvbnNxWDFtNjQ3TFlLSmt2Y0Vtd3NnYTJkd0FjVzFxdWVjM3RjLXQ2NkYtRm9kbnZlSnQ1ZEVCem1jam1HWDlMak4yTER5QzVQU1FRQWtOa1JjUWs?hl=pt-BR&gl=BR&ceid=BR%3Apt-419, line 288: Script terminated by timeout at:
-f@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:288:778
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/b5159e2b-59f4-44b2-8b33-c9d5f2a7f23b" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/b5159e2b-59f4-44b2-8b33-c9d5f2a7f23b" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/b5159e2b-59f4-44b2-8b33-c9d5f2a7f23b" ({})
+console.warn: WindowsJumpLists: "Fconsole.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/b5159e2b-59f4-44b2-8b33-c9d5f2a7f23b" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/497234a7-5f80-4096-8cb7-3c7eae27090e" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/6cfb993b-5643-41fd-80d0-68af3c135c54" ({})
+console.warn: WindowsJumpLists: "Failed to fetch favicon for " "https://notebooklm.google.com/notebook/14c4429e-e65d-4e50-8a1d-10ff2e07cb89" ({})
+kBmFbQCw02mLr27uw/m=_b,_tp:288:778
 f@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:288:849
 f@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:288:849
 f@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:288:849
@@ -19585,3 +19597,67 @@ oaa@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es
 Bh/<@/_/mss/boq-dots/_/js/k=boq-dots.DotsSplashUi_desktop_ms.pt_BR.u_K3tXi9TnI.es5.O/am=GAREYDBgFhhAAQ/d=1/excm=_b,_tp,article/ed=1/dg=0/wt=2/ujg=1/rs=ALs0n2PrtSJLUyvaGkBmFbQCw02mLr27uw/m=_b,_tp:188:100
 
 Dynamically enable window occlusion 1
+1731369277991	geckodriver	INFO	Listening on 127.0.0.1:54153
+1731369281024	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "54154" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofilesHsuPO"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1731369282026	Marionette	INFO	Marionette enabled
+1731369282434	Marionette	INFO	Listening on port 54162
+WebDriver BiDi listening on ws://127.0.0.1:54154
+Read port: 54162
+1731369282979	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-dBIHhJVuZo3E2QqD7HvocMEFT6d-VRIQt1AHvdDpayfOUwiwy9vpvbEaAzaID6w8HhLd4Y3Q&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1473452464%3A1731369295515606&ddm=1 line 1176 > injectedScript line 2 > eval line 2513 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+1731369277991	geckodriver	INFO	Listening on 127.0.0.1:54153
+1731369281024	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "54154" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofilesHsuPO"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1731369282026	Marionette	INFO	Marionette enabled
+1731369282434	Marionette	INFO	Listening on port 54162
+WebDriver BiDi listening on ws://127.0.0.1:54154
+Read port: 54162
+1731369282979	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-dBIHhJVuZo3E2QqD7HvocMEFT6d-VRIQt1AHvdDpayfOUwiwy9vpvbEaAzaID6w8HhLd4Y3Q&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1473452464%3A1731369295515606&ddm=1 line 1176 > injectedScript line 2 > eval line 2513 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+1731369277991	geckodriver	INFO	Listening on 127.0.0.1:54153
+1731369281024	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "54154" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofilesHsuPO"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1731369282026	Marionette	INFO	Marionette enabled
+1731369282434	Marionette	INFO	Listening on port 54162
+WebDriver BiDi listening on ws://127.0.0.1:54154
+Read port: 54162
+1731369282979	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-dBIHhJVuZo3E2QqD7HvocMEFT6d-VRIQt1AHvdDpayfOUwiwy9vpvbEaAzaID6w8HhLd4Y3Q&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1473452464%3A1731369295515606&ddm=1 line 1176 > injectedScript line 2 > eval line 2513 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+1731369277991	geckodriver	INFO	Listening on 127.0.0.1:54153
+1731369281024	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "54154" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Alex\\AppData\\Local\\Temp\\rust_mozprofilesHsuPO"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1731369282026	Marionette	INFO	Marionette enabled
+1731369282434	Marionette	INFO	Listening on port 54162
+WebDriver BiDi listening on ws://127.0.0.1:54154
+Read port: 54162
+1731369282979	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=AcMMx-dBIHhJVuZo3E2QqD7HvocMEFT6d-VRIQt1AHvdDpayfOUwiwy9vpvbEaAzaID6w8HhLd4Y3Q&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1473452464%3A1731369295515606&ddm=1 line 1176 > injectedScript line 2 > eval line 2513 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
