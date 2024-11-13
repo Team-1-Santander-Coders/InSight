@@ -7,10 +7,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
-public interface SummaryDataRepository extends JpaRepository<SummaryDataEntity, Long> {
-
+public interface SummaryDataRepository extends JpaRepository<SummaryDataEntity, String> {
     List<SummaryDataEntity> findByFinalDate(LocalDate date);
 
     Page<SummaryDataEntity> findByFinalDate(LocalDate date, Pageable pageable);
+
+    Optional<SummaryDataEntity> findByTopicTitleAndInitialDateAndFinalDate(String topicTitle, LocalDate initialDate, LocalDate finalDate);
+
 }

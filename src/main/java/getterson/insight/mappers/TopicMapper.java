@@ -8,22 +8,24 @@ import getterson.insight.services.TopicService;
 import getterson.insight.utils.exception.ThrowingFunctionWrapper;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
 public class TopicMapper implements Mapper<TopicEntity, TopicDTO> {
 
-    private final SummaryMapper summaryMapper;
     private final TopicService topicService;
+    private final SummaryDataMapper summaryDataMapper;
 
-    public TopicMapper(SummaryMapper summaryMapper, TopicService topicService) {
+    public TopicMapper(TopicService topicService, SummaryDataMapper summaryDataMapper) {
         this.topicService = topicService;
-        this.summaryMapper = summaryMapper;
+        this.summaryDataMapper = summaryDataMapper;
     }
 
     public TopicDTO toDTO(TopicEntity topicEntity){
         return createDTO(topicEntity);
     }
+
 
     public List<TopicDTO> toDTO(List<TopicEntity> topicEntities){
         return topicEntities.stream()
@@ -42,8 +44,10 @@ public class TopicMapper implements Mapper<TopicEntity, TopicDTO> {
     }
 
     private TopicDTO createDTO(TopicEntity topicEntity) {
-        return new TopicDTO(topicEntity.getId(), topicEntity.getTitle(), summaryMapper.toDTO(topicEntity.getSummaries()));
+        if(topicEntity.getSummaries() == null) return new TopicDTO(topicEntity.getId(), topicEntity.getTitle(), new ArrayList<>());
+        return new TopicDTO(topicEntity.getId(), topicEntity.getTitle(), summaryDataMapper.toSimpleDTO(topicEntity.getSummaries()));
     }
+
 
     private TopicEntity getEntity(TopicDTO topicDTO) throws TopicNotFoundException {
         return topicService.findById(topicDTO.id());

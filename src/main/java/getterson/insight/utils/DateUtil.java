@@ -11,6 +11,7 @@ public class DateUtil {
     public static final String DEFAULT_DATE_PATTERN = "dd/MM/yyyy";
     public static final String ISO8601_DATE_PATTERN = "yyyy-MM-dd";
     private static final DateTimeFormatter DEFAULT_FORMATTER = DateTimeFormatter.ofPattern(DEFAULT_DATE_PATTERN);
+    private static final DateTimeFormatter ISO_FORMATTER = DateTimeFormatter.ofPattern(ISO8601_DATE_PATTERN);
     private static final double DAY_DURATION = ChronoUnit.DAYS.getDuration().getSeconds();
     public static final String ZONEOFFSET = "-03:00";
 
@@ -18,11 +19,9 @@ public class DateUtil {
         return date.format(DEFAULT_FORMATTER);
     }
 
-    public static LocalDate stringToDate(String dateStr, String datePattern) throws IllegalDateException {
-        if (!isValidDate(dateStr, datePattern)) {
-            throw new IllegalDateException("Data inválida: " + dateStr + ". Verifique se o formato está correto e se a data é válida.");
-        }
+    public static String dateToIsoString(LocalDate date) { return date.format(ISO_FORMATTER); }
 
+    public static LocalDate stringToDate(String dateStr, String datePattern) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(datePattern);
         return LocalDate.parse(dateStr, formatter);
     }
