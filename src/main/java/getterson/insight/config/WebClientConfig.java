@@ -9,14 +9,14 @@ public class WebClientConfig {
     @Bean
     public WebClient summarizeClient() {
         return WebClient.builder()
-                .baseUrl("http://localhost:8000")
+                .baseUrl("http://fastapi:8000")
                 .build();
     }
 
     @Bean
     public WebClient whatsappClient() {
         return WebClient.builder()
-                .baseUrl("http://localhost:5000")
+                .baseUrl("http://whatsapp:5000")
                 .build();
     }
 }
