@@ -2,10 +2,6 @@
 
 # InSight
 
-## Nosso projeto
-### Home
-
-
 ## Descrição
 InSight é uma aplicação que permite ao usuário acompanhar tópicos de interesse nas redes sociais,
 sites de notícias e pesquisas no Google. A plataforma coleta, analisa e organiza informações 
