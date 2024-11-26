@@ -56,6 +56,17 @@ public class UserEntity {
     @Column(nullable = false)
     private String phone;
 
+    public UserEntity(Long id, String name, String username, String document, LocalDate birthDate, String email, String password, String phone,UserType type) {
+        this.name = name;
+        this.username = username;
+        this.document = document;
+        this.birthDate = birthDate;
+        this.email = email;
+        this.password = password;
+        this.phone = phone;
+        this.type = type;
+    }
+
     public UserEntity(String name, String username, String document, LocalDate birthDate, String email, String password, String phone,UserType type) {
         this.name = name;
         this.username = username;
