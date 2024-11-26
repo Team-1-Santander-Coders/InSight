@@ -10,11 +10,10 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import getterson.insight.exceptions.AuthenticationFailedException;
 import getterson.insight.dtos.LoginRequestDTO;
@@ -34,6 +33,15 @@ public class AuthController {
     public AuthController(UserService userService, JWTService jwtService){
         this.userService = userService;
         this.jwtService = jwtService;
+    }
+
+    @RequestMapping(method = RequestMethod.OPTIONS, path = "/**")
+    public void handleOptionsRequest(HttpServletResponse response) {
+        response.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+        response.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+        response.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With");
+        response.setHeader("Access-Control-Allow-Credentials", "true");
+        response.setHeader("Access-Control-Max-Age", "3600");
     }
 
     @Operation(summary = "Login de usuário", description = "Realiza o login do usuário, retornando um token JWT.")

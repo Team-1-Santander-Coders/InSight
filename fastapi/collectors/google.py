@@ -28,8 +28,10 @@ async def get_posts_from_google(data: SummaryDataRequest) -> Tuple[str, List]:
 def fetch_article_content(data):
     options = Options()
     options.add_argument("--headless")
-
-    driver = webdriver.Firefox(options=options)
+    options.binary_location = "/usr/bin/firefox"
+    geckodriver_path = "/usr/local/bin/geckodriver"
+    driver = webdriver.Firefox(
+        executable_path=geckodriver_path, options=options)
     result = []
     links = []
     for item in data:
